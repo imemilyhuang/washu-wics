@@ -1,0 +1,8 @@
+@import '../../index';
+
+.mission-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: $section-big-width;
+}

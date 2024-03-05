@@ -1,0 +1,12 @@
+@import "../../index.scss";
+
+.sponsor-img {
+    width: 200px;
+    margin: 0 $xLargePadding;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

@@ -1,0 +1,26 @@
+@import '../../index';
+
+.hero-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: $section-big-width;
+}
+
+.placeholder {
+    width: 250px;
+    height: 300px;
+    background-color: lightgray;
+}
+
+.call-to-action-button {
+    background-color: $purple;
+    padding: $defaultPadding;
+    border-radius: $buttonBorderRadius;
+}
+
+button p {
+    color: $white;
+    font-weight: $bold;
+}

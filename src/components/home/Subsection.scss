@@ -1,0 +1,28 @@
+@import '../../index';
+
+.subsection-card-img {
+    height: 150px;
+    width: 150px;
+    background-color: lightgray;
+    margin: $defaultPadding;
+}
+
+.subsections-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: $section-big-width;
+}
+
+.items-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.learn-more-button {
+    background-color: $purple;
+    padding: $smallPadding $defaultPadding;
+    border-radius: $buttonBorderRadius;
+}

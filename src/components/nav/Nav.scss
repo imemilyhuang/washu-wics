@@ -1,0 +1,33 @@
+@import "../../index.scss";
+
+.nav-logo {
+    width: 100px;
+}
+
+.foot-container {
+    padding: $largePadding;
+    background-color: $peach;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-container {
+    padding: $defaultPadding $largePadding;
+    background-color: $peach;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.routes-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}

@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { useRoutes } from 'react-router-dom';
+
+import WrapNav from "./components/nav/WrapNav"
+import Home from './routes/Home';
+import Events from './routes/Events';
+import Team from './routes/Team';
+import Resources from './routes/Resources';
+import Lost from './routes/Lost';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const element = useRoutes([
+    {
+      path:"/",
+      element: <WrapNav children={<Home />} />
+    },
+    {
+      path:"/home",
+      element: <WrapNav children={<Home />} />
+    },
+    {
+      path:"/events",
+      element: <WrapNav children={<Events />} />
+    },
+    {
+      path:"/team",
+      element: <WrapNav children={<Team />} />
+    },
+    {
+      path:"/resources",
+      element: <WrapNav children={<Resources />} />
+    },
+    {
+      path:"/*",
+      element: <WrapNav children={<Lost />} />
+    },
+  ])
+  return element
 }
 
 export default App;

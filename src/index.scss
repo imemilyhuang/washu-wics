@@ -1,0 +1,116 @@
+$extraBold: 800;
+$bold: 700;
+$semiBold: 600;
+$lightBold: 500;
+$regular: 400;
+$light: 200;
+
+$buttonBorderRadius: 10px;
+
+$purple: #834273;
+$dark-pink: #DD78A6;
+$light-pink: #f7d7d7;
+$peach: #ffedda;
+$orange-peach: #FFC0A4;
+$pink: #EDA9AD;
+$white: #FEFEFE;
+
+$smallPadding: 10px;
+$defaultPadding: 15px;
+$largePadding: 40px;
+$xLargePadding: 60px;
+$xxLargePadding: 80px;
+
+$section-big-width: 800px;
+
+.pad {
+  padding: $defaultPadding;
+}
+.pad2 {
+  padding: $largePadding;
+}
+.pad3 {
+  padding: $xLargePadding;
+}
+
+.padb {
+  padding-bottom: $defaultPadding;
+}
+.padb2 {
+  padding-bottom: $largePadding;
+}
+.padb3 {
+  padding-bottom: $xLargePadding;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  :hover {
+    cursor: pointer;
+  }
+}
+
+.container-pink {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-color: $light-pink;
+  padding-top: $xxLargePadding;
+  padding-bottom: $xxLargePadding;
+}
+
+.container-peach {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-color: $peach;
+  padding-top: $xxLargePadding;
+  padding-bottom: $xxLargePadding;
+}
+
+.container-white {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-color: $white;
+  padding-top: $xxLargePadding;
+  padding-bottom: $xxLargePadding;
+}
+
+.container-align-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: $purple;
+  :hover {
+    color: $dark-pink;
+  }
+}
