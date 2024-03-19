@@ -114,6 +114,16 @@ p {
   }
 }
 
+.margin {
+  margin: $defaultPadding;
+}
+.margin2 {
+  margin: $largePadding;
+}
+.margin3 {
+  margin: $xLargePadding;
+}
+
 .pad {
   padding: $defaultPadding;
 }
@@ -124,8 +134,17 @@ p {
   padding: $xLargePadding;
 }
 
+.marginb {
+  margin-bottom: $defaultPadding;
+}
+.marginb2 {
+  margin-bottom: $largePadding;
+}
+.marginb3 {
+  margin-bottom: $xLargePadding;
+}
 .padb {
-  padding-bottom: $defaultPadding;
+  margin-bottom: $defaultPadding;
 }
 .padb2 {
   padding-bottom: $largePadding;
@@ -242,4 +261,11 @@ form {
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+.execPic {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  object-fit: cover;
 }
