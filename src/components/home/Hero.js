@@ -6,13 +6,17 @@ const Hero = () => {
     <div className='container-peach'>
       <div className='hero-container'>
         <div>
-          <h1 className='padb'>Women in CS at WashU</h1>
-          <p className='padb2'>Bolster. Support. Empower.</p>
+          <h1 className=''>Women in CS</h1>
+          <h1 className='padb2 purple-text'>at WashU</h1>
+          <h2 className='padb'>Bolster. Support. Empower.</h2>
           <button className='call-to-action-button'>
             <p>Get connected</p>
           </button>
         </div>
-        <div className='placeholder'></div>
+        <img 
+          src={process.env.PUBLIC_URL+"/logo.png"}
+          className='hero-logo' alt='logo'
+        />
       </div>
     </div>
   )

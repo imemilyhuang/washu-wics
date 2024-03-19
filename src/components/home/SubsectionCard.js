@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Subsection.scss"
+import { Link } from 'react-router-dom'
 
 const SubsectionCard = ({data}) => {
   return (
@@ -13,9 +14,8 @@ const SubsectionCard = ({data}) => {
         src={process.env.PUBLIC_URL+data.img}
         className='subsection-card-img padb'
       /> */}
-      <button className='learn-more-button'>
-        <p>Learn more</p>
-      </button>
+      <Link to={data.link}>
+        <button className='learn-more-button'><p>Learn more</p></button></Link>
     </div>
   )
 }

@@ -12,7 +12,7 @@ const Sponsors = () => {
         <div className='logo-container'>
           {
             data.map(image => 
-            <a href={image.link}>
+            <a href={image.link} key={image.link}>
               <img 
                 alt='sponsor'
                 src={process.env.PUBLIC_URL+"/assets/sponsors/"+image.imagePath}

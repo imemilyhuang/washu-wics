@@ -21,7 +21,98 @@ $largePadding: 40px;
 $xLargePadding: 60px;
 $xxLargePadding: 80px;
 
-$section-big-width: 800px;
+$section-big-width: 66rem;
+
+.purple-text {
+  color: $purple;
+}
+.white-text {
+  color: $white;
+}
+
+h1 {
+  font-weight: $bold;
+  font-size: 4rem;
+  @media only screen and (max-width: 800px) {
+    font-size: 3rem;
+  }
+  @media only screen and (max-width: 400px) {
+    font-size: 2.75rem;
+  }
+}
+h2 {
+  font-weight: $bold;
+  font-size: 2.25rem;
+  @media only screen and (max-width: 800px) {
+    font-size: 2rem;
+  }
+  @media only screen and (max-width: 400px) {
+    font-size: 1.5rem;
+  }
+}
+h3 {
+  font-weight: $bold;
+  font-size: 1.85rem;
+  @media only screen and (max-width: 800px) {
+    font-size: 1.65rem;
+  }
+  @media only screen and (max-width: 400px) {
+    font-size: 1.5rem;
+  }
+}
+.semiBold {
+  font-weight: $semiBold;
+}
+h4 {
+  font-weight: $semiBold;
+  font-size: 1.4rem;
+  @media only screen and (max-width: 800px) {
+    font-size: 1.2rem;
+  }
+  @media only screen and (max-width: 400px) {
+    font-size: 0.9rem;
+  }
+}
+
+h2.evenSmaller {
+  font-weight: $bold;
+  font-size: 1.125rem;
+  @media only screen and (max-width: 800px) {
+    font-size: 1rem;
+  }
+  @media only screen and (max-width: 400px) {
+    font-size: 0.875rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  font-weight: $regular;
+  font-style: italic;
+  @media only screen and (max-width: 800px) {
+    font-size: 1rem;
+  }
+  @media only screen and (max-width: 400px) {
+    font-size: 0.875rem;
+  }
+}
+
+li {
+  font-size: 1rem;
+  font-weight: $regular;
+  margin-left: 2rem;
+  @media only screen and (max-width: 800px) {
+    font-size: 0.875rem;
+  }
+}
+
+p {
+  font-size: 1rem;
+  font-weight: $regular;
+  @media only screen and (max-width: 800px) {
+    font-size: 0.875rem;
+  }
+}
 
 .pad {
   padding: $defaultPadding;
@@ -46,12 +137,11 @@ $section-big-width: 800px;
 * {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 button {
@@ -60,6 +150,14 @@ button {
   :hover {
     cursor: pointer;
   }
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button p {
+  font-size: 1rem;
 }
 
 .container-pink {
@@ -113,4 +211,35 @@ a {
   :hover {
     color: $dark-pink;
   }
+}
+
+.full-left-container {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  justify-content: flex-start;
+  padding: $xxLargePadding;
+
+}
+
+input {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 0;
+  background-color: white;
+
+  box-shadow: 0 0 15px 1px rgba(0,0,0,.15);
+  border-radius: 5px;
+  width: 250px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
