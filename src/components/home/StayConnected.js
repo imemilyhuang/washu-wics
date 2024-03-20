@@ -2,7 +2,7 @@ import React from 'react'
 
 const StayConnected = () => {
   return (
-    <div className='container-peach'>
+    <div className='container-light-pink'>
       <div className='mission-container'>
         <h1 className='padb'>stay connected</h1>
         <p className='padb2'>_____</p>
