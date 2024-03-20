@@ -7,13 +7,18 @@ $light: 200;
 
 $buttonBorderRadius: 10px;
 
-$purple: #834273;
-$dark-pink: #DD78A6;
-$light-pink: #f7d7d7;
-$peach: #ffedda;
+$dark-purple: #240432;
+$gray-purple: #665765;
+$purple: #5A257D;
+$light-purple: #8543D9;
+$extra-light-purple: #C5C5FD;
+$dark-pink: #DA80C0;
+$pink: #F77E93;
+$light-pink: #EA5B94;
+$peach: #f5dcdc;
 $orange-peach: #FFC0A4;
-$pink: #EDA9AD;
-$white: #FEFEFE;
+$white: #f0f0f6;
+$black: #0B090B;
 
 $smallPadding: 10px;
 $defaultPadding: 15px;
@@ -21,13 +26,20 @@ $largePadding: 40px;
 $xLargePadding: 60px;
 $xxLargePadding: 80px;
 
-$section-big-width: 66rem;
+$section-big-width: 84rem;
+$section-mid-width: 66rem;
 
 .purple-text {
   color: $purple;
 }
 .white-text {
   color: $white;
+}
+.black-text {
+  color: $black;
+}
+.bold {
+  font-weight: $bold;
 }
 
 a {
@@ -74,12 +86,23 @@ h3 {
 }
 h4 {
   font-weight: $semiBold;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   @media only screen and (max-width: 800px) {
     font-size: 1.2rem;
   }
   @media only screen and (max-width: 400px) {
     font-size: 0.9rem;
+  }
+}
+h5 {
+  font-weight: $regular;
+  font-size: 1rem;
+  color: $gray-purple;
+  @media only screen and (max-width: 800px) {
+    font-size: 0.8rem;
+  }
+  @media only screen and (max-width: 400px) {
+    font-size: 0.7rem;
   }
 }
 
@@ -189,6 +212,25 @@ button p {
   font-size: 1rem;
 }
 
+.container-dark-gradient {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-color: $black;
+  padding-bottom: $xxLargePadding;
+  background-image: linear-gradient(to top, $black 0%, $black 65%, $dark-purple 100%);
+}
+
+.container-dark {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-color: $black;
+  padding-top: $xxLargePadding;
+  padding-bottom: $xxLargePadding;
+}
 .container-light-pink {
   display: flex;
   width: 100%;
@@ -245,9 +287,11 @@ button p {
 
 .link {
   text-decoration: none;
-  color: $purple;
+  color: $light-purple;
+  transition: all 0.5s ease-in-out;
   :hover {
-    color: $dark-pink;
+    color: $light-pink;
+    transition: all 0.5s ease-in-out;
   }
 }
 
@@ -286,3 +330,5 @@ form {
   display: flex;
   flex-wrap: wrap;
 }
+
+

@@ -5,7 +5,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: $section-big-width;
+    width: $section-mid-width;
+}
+
+.nav-pad {
+    padding-top: calc($xxLargePadding + 6rem);
 }
 
 .placeholder {
@@ -15,16 +19,41 @@
 }
 
 .call-to-action-button {
-    background-color: $purple;
-    padding: $defaultPadding;
-    border-radius: $buttonBorderRadius;
+    // background-color: $light-purple;
+    padding: $defaultPadding $largePadding;
+    border-radius: 100px;
+    cursor: pointer;
+    background: linear-gradient(to left, $light-purple 0%, $dark-pink 50%, $light-purple 100%);
+    background-size: 200%;
+    transition: 0.6s;
 }
 
+.call-to-action-button:hover {
+    background-position: right;
+}
+
+.max-width-container {
+    width: $section-big-width;
+}
+
+
 .hero-logo {
-    width: 300px;
+    height: 500px;
 }
 
 button p {
     color: $white;
     font-weight: $bold;
+}
+
+.text-container {
+    position: relative; /* Enable stacking for overlay */
+    overflow: hidden; /* Clip overflowing content */
+    cursor: default;
+}
+.overlay-text {
+    position: absolute; /* Position text on top */
+    top: 0;
+    left: 0;
+    z-index: 0;
 }

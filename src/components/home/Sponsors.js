@@ -2,12 +2,21 @@ import React from 'react'
 import "./Sponsor.scss"
 
 const Sponsors = () => {
-  const data = [{imagePath:"lacrm.jpg", link: "https://www.lessannoyingcrm.com/"},{imagePath:"spectrum.jpg", link: "https://www.spectrum.com/"}]
+  const data = [
+    {imagePath:"lacrm.png", link: "https://www.lessannoyingcrm.com/"},
+    {imagePath:"spectrum.png", link: "https://www.spectrum.com/"},
+    {imagePath:"imc.png", link: "https://www.imc.com/us/"},
+    {imagePath:"capitalone.png", link: "https://www.capitalone.com/"},
+    {imagePath:"exegy.gif", link: "https://www.exegy.com/"},
+    {imagePath:"square.png", link: "https://squareup.com/us/en"},
+    {imagePath:"google.webp", link: "https://about.google/"},
+    {imagePath:"atnt.png", link: "https://www.att.com/"},
+  ]
 
   return (
     <div className='container-white'>
       <div className='mission-container'>
-        <h1 className='padb'>wics sponsors</h1>
+        <h1 className='padb'>Past Sponsors</h1>
         <p className='padb2'>_____</p>
         <div className='logo-container'>
           {

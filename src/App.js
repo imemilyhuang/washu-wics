@@ -44,7 +44,7 @@ function App() {
     },
     {
       path:"/admin",
-      element: <Protected><Admin /></Protected>
+      element: <Protected><WrapNav children={<Admin />} /></Protected>
     },
     {
       path:"/*",

@@ -1,12 +1,19 @@
 @import "../../index.scss";
 
 .sponsor-img {
-    width: 200px;
-    margin: 0 $xLargePadding;
+    height: 25px;
+    margin-right: $largePadding;
+    
+    // -webkit-filter: grayscale(100%);
+    // -moz-filter: grayscale(100%);
+    // -o-filter: grayscale(100%);
+    // -ms-filter: grayscale(100%);
+    // filter: grayscale(100%); 
 }
 
 .logo-container {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
 }
