@@ -9,7 +9,15 @@
     position: absolute;
 }
 
+.nav-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
 .foot-container {
+    margin-top: auto;
     padding: $largePadding;
     background-color: $black;
     display: flex;

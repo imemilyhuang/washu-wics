@@ -49,7 +49,7 @@ const Login = () => {
         />
         {errors.email.length > 0 && <p className='error'>{errors.email}</p>}
         <input
-          type="text"
+          type="password"
           value={formData.password}
           onChange={handleChange}
           placeholder="Password"

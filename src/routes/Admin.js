@@ -7,7 +7,7 @@ const Admin = () => {
     signOut(auth)
   }
   return (
-    <div>
+    <div className='full-left-container nav-pad'>
       <h1>Admin</h1>
       <button className='learn-more-button' onClick={logout}><p>Log out</p></button>
     </div>

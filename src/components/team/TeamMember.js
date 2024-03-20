@@ -4,7 +4,7 @@ import { storage } from '../../firebase'
 import "./TeamMember.scss"
 
 const TeamMember = ({data}) => {
-  const [image, setImage] = useState(process.env.PUBLIC_URL+"/assets/default.jpeg")
+  const [image, setImage] = useState(process.env.PUBLIC_URL+"/assets/default.png")
   useEffect(() => {
     if (data.imagePath!=="default") {
       const pathRef = ref(storage, `team/${data.imagePath}`)

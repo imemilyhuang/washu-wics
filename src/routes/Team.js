@@ -25,7 +25,7 @@ const Team = () => {
   // console.log(teamMembers)
 
   return (
-    <div className='full-left-container'>
+    <div className='full-left-container nav-pad'>
       <h1>Executive Board</h1>
       <div className='card-flex-wrap'>
         {

@@ -22,7 +22,7 @@ const NavBar = () => {
               </Link>
             )
           }
-          {user && <Link to="/admin" className='nav-route link'><h4>Admin</h4></Link>}
+          {user && <Link to="/admin" className='nav-route link'><h4>admin</h4></Link>}
         </div>
       </div>
     </div>

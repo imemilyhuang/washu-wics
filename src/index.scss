@@ -301,7 +301,6 @@ button p {
   align-self: flex-start;
   justify-content: flex-start;
   padding: $xxLargePadding;
-
 }
 
 input {
@@ -331,4 +330,10 @@ form {
   flex-wrap: wrap;
 }
 
+.nav-pad {
+  padding-top: calc($xxLargePadding + 6rem);
+}
 
+.admin-container {
+  padding: $xxLargePadding;
+}
