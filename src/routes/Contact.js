@@ -1,4 +1,5 @@
 import React from 'react'
+import Loader from '../components/loader/Loader'
 
 const Contact = () => {
   return (
@@ -7,6 +8,7 @@ const Contact = () => {
       <p>
         To contact WiCS, please email <a className='link' href="mailto:wics@su.wustl.edu" target="_blank" rel="noopener noreferrer">wics@su.wustl.edu</a> or visit us on our social media
       </p>
+
     </div>
   )
 }

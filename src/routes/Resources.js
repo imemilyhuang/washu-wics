@@ -16,6 +16,7 @@ const Resources = () => {
     {link: "https://www.computerscience.org/resources/women-in-computer-science/", title: "ComputerScience.org"},
     {link: "https://www.hp.com/us-en/shop/tech-takes/computer-science-engineering-resources-women-stem", title: "HP"},
     {link: "https://www.computersciencezone.org/best-computer-science-scholarships/", title: "Best Scholarships"},
+    {link: "https://ghc.anitab.org/", title: "Anita B Grace Hopper Celebration"},
   ]
 
   return (
