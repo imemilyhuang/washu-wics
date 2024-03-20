@@ -22,14 +22,16 @@ const Team = () => {
     }
   }, [])
 
-  console.log(teamMembers)
+  // console.log(teamMembers)
 
   return (
     <div className='full-left-container'>
       <h1>Executive Board</h1>
-      {
-        teamMembers.map(data => <TeamMember data={data} key={data.id} />)
-      }
+      <div className='card-flex-wrap'>
+        {
+          teamMembers.map(data => <TeamMember data={data} key={data.id} />)
+        }
+      </div>
     </div>
   )
 }

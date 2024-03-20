@@ -30,6 +30,15 @@ $section-big-width: 66rem;
   color: $white;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
 h1 {
   font-weight: $bold;
   font-size: 4rem;
@@ -157,6 +166,7 @@ p {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
@@ -224,7 +234,7 @@ button p {
   text-align: center;
 }
 
-a {
+.link {
   text-decoration: none;
   color: $purple;
   :hover {
@@ -263,9 +273,7 @@ form {
   height: 100vh;
 }
 
-.execPic {
-  height: 200px;
-  width: 200px;
-  border-radius: 100px;
-  object-fit: cover;
+.card-flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
 }

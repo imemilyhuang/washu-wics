@@ -7,14 +7,14 @@ const NavBar = () => {
   return (
     <div className='big-container'>
       <div className='nav-container'>
-        <Link to="/">
+        <Link to="/" className='link'>
           <h3>WashU WiCS</h3>
         </Link>
 
         <div className='routes-holder'>
           {
             data.map(route => 
-              <Link to={"/"+route.name} className='nav-route' key={route.name}>
+              <Link to={"/"+route.name} className='nav-route link' key={route.name}>
                 <h3>{route.name}</h3>
               </Link>
             )
