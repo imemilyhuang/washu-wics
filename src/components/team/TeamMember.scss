@@ -8,7 +8,7 @@
     object-fit: cover;
 }
 
-.card {
+.t-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,9 +19,10 @@
     background-color: $white;
     border-radius: $buttonBorderRadius;
     transition: 0.3s ease-out;
+    cursor: pointer;
 }
 
-.card:hover {
+.t-card:hover {
     box-shadow: 0 10px 40px rgba(0,0,0,0.2);
     transform: scale(1.1);
 }

@@ -39,8 +39,9 @@ const Login = () => {
   return (
     <div className='container'>
       <form onSubmit={handleSubmit}>
-        <h2 style={{marginBottom: "15px"}}>Welcome back.</h2>
-        <input
+        <h2 className='marginb'>Welcome back.</h2>
+        <p className='marginb2'>This is the login for the admin page</p>
+        <input className='marginb2'
           type="text"
           value={formData.email}
           onChange={handleChange}
@@ -48,7 +49,7 @@ const Login = () => {
           name="email"
         />
         {errors.email.length > 0 && <p className='error'>{errors.email}</p>}
-        <input
+        <input className='marginb2'
           type="password"
           value={formData.password}
           onChange={handleChange}
@@ -57,8 +58,9 @@ const Login = () => {
         />
         {errors.pass.length > 0 && <p className='error'>{errors.pass}</p>}
 
-        <button type='submit' className='call-to-action-button'><p>Log in</p></button>
+        <button type='submit' style={{width: "300px"}} className='call-to-action-button marginb2'><p>Log in</p></button>
 
+        <button className='link' onClick={() => navigate(-1)}><p className='purple-text'>Go back</p></button>
       </form>
     </div>
   )

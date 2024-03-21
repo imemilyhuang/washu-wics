@@ -22,6 +22,11 @@ const Resources = () => {
   return (
     <div className='full-left-container nav-pad'>
       <h1>Resources</h1>
+      <img 
+        alt='contact'
+        src={process.env.PUBLIC_URL+"/assets/home/connected.png"}
+        className='big-img'
+      />
       <h4>Information about achievements</h4>
       <ul className='padb'>
         {

@@ -1,11 +1,28 @@
 @import '../../index';
 
 .subsection-card-img {
-    height: 150px;
-    width: 150px;
-    background-color: lightgray;
+    height: 250px;
     margin: $defaultPadding;
 }
+
+.card {
+    padding: $largePadding;
+    border-radius: $buttonBorderRadius;
+    width: 23rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to top right, $black 0%, $black 50%, $dark-purple 100%);
+    // background: linear-gradient($black 0%, $dark-purple 50%, $black 100%);
+    background-size: 400%;
+    transition: 0.6s;
+    background-position: 0;
+}
+
+.card:hover {
+    background-position: right;
+}
+
 
 .subsections-container {
     display: flex;
@@ -32,7 +49,14 @@
 }
 
 .learn-more-button {
-    background-color: $purple;
-    padding: $defaultPadding;
-    border-radius: $buttonBorderRadius;
+    padding: $defaultPadding $largePadding;
+    border-radius: 100px;
+    cursor: pointer;
+    background: linear-gradient(to left, $purple 0%, $light-purple 50%, $purple 100%);
+    background-size: 200%;
+    transition: 0.6s;
+}
+
+.learn-more-button:hover {
+    background-position: right;
 }

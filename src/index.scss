@@ -5,19 +5,15 @@ $lightBold: 500;
 $regular: 400;
 $light: 200;
 
-$buttonBorderRadius: 10px;
+$buttonBorderRadius: 25px;
 
-$dark-purple: #240432;
-$gray-purple: #665765;
-$purple: #5A257D;
-$light-purple: #8543D9;
-$extra-light-purple: #C5C5FD;
-$dark-pink: #DA80C0;
-$pink: #F77E93;
-$light-pink: #EA5B94;
+$dark-purple: #1E1B37;
+$purple: #626EEB;
+$light-purple: #9E8CFF;
+$pink: #FF71BC;
 $peach: #f5dcdc;
-$orange-peach: #FFC0A4;
-$white: #f0f0f6;
+$orange-peach: #FF7F56;
+$white: #FFFFFF;
 $black: #0B090B;
 
 $smallPadding: 10px;
@@ -53,8 +49,10 @@ a:hover {
 }
 
 h1 {
-  font-weight: $bold;
+  // font-family: "Archivo Black", sans-serif;
   font-size: 4rem;
+  letter-spacing: .2rem;
+  // text-transform: uppercase; 
   @media only screen and (max-width: 800px) {
     font-size: 3rem;
   }
@@ -98,7 +96,6 @@ h4 {
 h5 {
   font-weight: $regular;
   font-size: 1rem;
-  color: $gray-purple;
   @media only screen and (max-width: 800px) {
     font-size: 0.8rem;
   }
@@ -232,31 +229,13 @@ button p {
   padding-top: $xxLargePadding;
   padding-bottom: $xxLargePadding;
 }
-.container-light-pink {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  background-color: $light-pink;
-  padding-top: $xxLargePadding;
-  padding-bottom: $xxLargePadding;
-}
+
 .container-pink {
   display: flex;
   width: 100%;
   flex-direction: column;
   align-items: center;
   background-color: $pink;
-  padding-top: $xxLargePadding;
-  padding-bottom: $xxLargePadding;
-}
-
-.container-peach {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  background-color: $peach;
   padding-top: $xxLargePadding;
   padding-bottom: $xxLargePadding;
 }
@@ -291,7 +270,7 @@ button p {
   color: $light-purple;
   transition: all 0.5s ease-in-out;
   :hover {
-    color: $light-pink;
+    color: $pink;
     transition: all 0.5s ease-in-out;
   }
 }
@@ -305,15 +284,13 @@ button p {
 }
 
 input {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  padding: 12px;
+  padding: $defaultPadding $defaultPadding;
   border: 0;
   background-color: white;
 
   box-shadow: 0 0 15px 1px rgba(0,0,0,.15);
-  border-radius: 5px;
-  width: 250px;
+  border-radius: $buttonBorderRadius;
+  width: 300px;
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
 }
@@ -337,4 +314,11 @@ form {
 
 .admin-container {
   padding: $xxLargePadding;
+}
+
+.big-img {
+  margin-top: $largePadding;
+  margin-bottom: $largePadding;
+  height: 500px;
+  width: min-content;
 }

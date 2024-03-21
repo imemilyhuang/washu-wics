@@ -3,25 +3,19 @@ import React, { Suspense, lazy } from 'react';
 
 import WrapNav from "./components/nav/WrapNav"
 
-// import Home from './routes/Home';
-// import Events from './routes/Events';
-// import Team from './routes/Team';
-// import Resources from './routes/Resources';
-// import Contact from './routes/Contact';
-// import Login from './routes/Login';
-// import Admin from './routes/Admin';
 import Protected from './routes/Protected';
 import { AuthContextComponent } from './context/AuthContext';
 import Loader from './components/loader/Loader';
+import Lost from './routes/Lost';
 
 const Home = lazy(() => import('./routes/Home'));
 const Events = lazy(() => import('./routes/Events'));
+const EventPage = lazy(() => import('./routes/EventPage'));
 const Team = lazy(() => import('./routes/Team'));
 const Resources = lazy(() => import('./routes/Resources'));
 const Contact = lazy(() => import('./routes/Contact'));
 const Login = lazy(() => import('./routes/Login'));
 const Admin = lazy(() => import('./routes/Admin'));
-const Lost = lazy(() => import('./routes/Lost'));
 
 function App() {
   const element = useRoutes([
@@ -36,6 +30,10 @@ function App() {
     {
       path:"/events",
       element: <WrapNav children={<Suspense fallback={<Loader/>}><Events /></Suspense>} />
+    },
+    {
+      path:"/events/:id",
+      element: <WrapNav children={<Suspense fallback={<Loader/>}><EventPage /></Suspense>} />
     },
     {
       path:"/contact",
@@ -59,7 +57,8 @@ function App() {
     },
     {
       path:"/*",
-      element: <WrapNav children={<Suspense fallback={<Lost/>}></Suspense>} />
+      element: <WrapNav children={<Lost />} />
+      // element: <WrapNav children={<Suspense fallback={<Lost />}></Suspense>} />
     },
   ])
   return <AuthContextComponent>
