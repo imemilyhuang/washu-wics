@@ -34,7 +34,7 @@ const Footer = () => {
         <p className='white-text padb'>Other pages</p>
         <div>
           {
-            pageLinks1.map(data => <Link to={data.link} className='link'><p className='bold white-text'>{data.text}</p></Link>)
+            pageLinks1.map(data => <Link key={data.link} to={data.link} className='link'><p className='bold white-text'>{data.text}</p></Link>)
           }        
         </div>
       </div>
@@ -42,7 +42,7 @@ const Footer = () => {
         <p className='padb'>Other pages</p>
         <div>
           {
-            pageLinks2.map(data => <Link to={data.link} className='link'><p className='bold white-text'>{data.text}</p></Link>)
+            pageLinks2.map(data => <Link key={data.link} to={data.link} className='link'><p className='bold white-text'>{data.text}</p></Link>)
           }        
         </div>
       </div>
