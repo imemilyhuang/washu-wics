@@ -5,4 +5,14 @@
     flex-direction: column;
     align-items: center;
     width: $section-big-width;
+    padding: $largePadding;
+    @media only screen and (max-width: 1600px) {
+        width: $section-mid-big-width;
+    }
+    @media only screen and (max-width: 1250px) {
+        width: $section-mid-width;
+    }
+    @media only screen and (max-width: 1000px) {
+        width: 100%;
+    }
 }

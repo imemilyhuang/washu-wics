@@ -5,7 +5,18 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: $section-mid-width;
+    width: $section-big-width;
+    @media only screen and (max-width: 1600px) {
+        width: $section-mid-big-width;
+    }
+    @media only screen and (max-width: 1250px) {
+        width: $section-mid-width;
+    }
+    @media only screen and (max-width: 1000px) {
+        width: $section-mid-width;
+        flex-direction: column;
+
+    }
 }
 
 .placeholder {
