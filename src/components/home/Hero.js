@@ -22,7 +22,7 @@ const Hero = () => {
           </Link>
 
           <h5 className='padb'>This Year's Sponsors</h5>
-          <div className='logo-container'>
+          <div className='logo-container justify-flex-start'>
           { data.map(image => 
                 <a href={image.link} key={image.link}>
                   <img 
