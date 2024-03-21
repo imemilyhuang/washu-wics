@@ -18,6 +18,7 @@ const Sponsors = () => {
       <div className='mission-container'>
         <h1 className='padb'>Past Sponsors</h1>
         <p className='padb2'>_____</p>
+        <p className='padb2'>Will make another page for this</p>
         <div className='logo-container'>
           {
             data.map(image => 
