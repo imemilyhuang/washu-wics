@@ -1,0 +1,91 @@
+@import "../../index.scss";
+
+.login-form input {
+    padding: $defaultPadding $defaultPadding;
+    border: 0;
+    background-color: white;
+
+    box-shadow: 0 0 15px 1px rgba(0,0,0,.15);
+    border-radius: $buttonBorderRadius;
+    width: 300px;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+form input {
+    padding: $defaultPadding $defaultPadding;
+    border: 0;
+    background-color: white;
+
+    box-shadow: 0 0 15px 1px rgba(0,0,0,.15);
+    border-radius: $buttonBorderRadius;
+    width: 300px;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.time-picker input {
+    font-size: 1rem;
+    border: 0;
+    font-family: "Poppins", sans-serif;
+}
+.bubble-left {
+    background-color: white;
+    font-size: 1rem;
+    border: 0;
+    width: 6rem;
+    border-radius: 2rem 0 0 2rem;
+    padding: $defaultPadding $defaultPadding;
+    box-shadow: 0 0 15px 1px rgba(0,0,0,.15);
+    font-family: "Poppins", sans-serif;
+}
+.bubble-right {
+    background-color: white;
+    font-size: 1rem;
+    border: 0;
+    width: 6rem;
+    border-radius: 0 2rem 2rem 0;
+    padding: $defaultPadding $defaultPadding;
+    box-shadow: 0 0 15px 1px rgba(0,0,0,.15);
+    font-family: "Poppins", sans-serif;
+}
+input[type="radio"]{
+    position: fixed;
+    opacity: 0;
+}
+
+.checked {
+    background-color: $purple;
+    color: $white;
+	transition: background-color 0.2s ease-in-out;
+}
+
+.check-box {
+    padding: $defaultPadding;
+    border: 2px $purple solid;
+}
+
+label:hover:has(input[type="radio"]:checked) {
+    color: $white !important;
+}
+
+.check-box:hover {
+    cursor: pointer;
+    color: $purple;
+}
+.left-box {
+    border-radius: 2rem 0 0 2rem;
+    padding: $defaultPadding $defaultPadding;
+}
+.right-box {
+    border-radius: 0 2rem 2rem 0;
+    padding: $defaultPadding $defaultPadding;
+}

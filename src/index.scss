@@ -283,26 +283,6 @@ button p {
   padding: $xxLargePadding;
 }
 
-input {
-  padding: $defaultPadding $defaultPadding;
-  border: 0;
-  background-color: white;
-
-  box-shadow: 0 0 15px 1px rgba(0,0,0,.15);
-  border-radius: $buttonBorderRadius;
-  width: 300px;
-  font-size: 1rem;
-  font-family: "Poppins", sans-serif;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
 .card-flex-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -321,4 +301,8 @@ form {
   margin-bottom: $largePadding;
   height: 500px;
   width: min-content;
+}
+
+h1::selection {
+  background: $light-purple;
 }
