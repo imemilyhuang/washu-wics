@@ -7,7 +7,7 @@ $light: 200;
 
 $buttonBorderRadius: 25px;
 
-$dark-purple: #1E1B37;
+$dark-purple: #3c3861;
 $purple: #626EEB;
 $light-purple: #9E8CFF;
 $pink: #FF71BC;
@@ -16,19 +16,36 @@ $orange-peach: #FF7F56;
 $white: #FFFFFF;
 $black: #0B090B;
 
-$smallPadding: 10px;
-$defaultPadding: 15px;
-$largePadding: 40px;
-$xLargePadding: 60px;
-$xxLargePadding: 80px;
+$padding-1: 1rem;
+$padding-2: 2rem;
+$padding-4: 4rem;
+$padding-6: 6rem;
 
-$section-big-width: 76rem;
-$section-mid-big-width: 66rem;
-$section-mid-width: 50rem;
+$section-76-width: 76rem;
+$section-66-width: 66rem;
+$section-50-width: 50rem;
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+}
+
+#root {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
 
 .purple-text {
   color: $purple;
 }
+
 .white-text {
   color: $white;
 }
@@ -49,17 +66,20 @@ a:hover {
 }
 
 h1 {
-  // font-family: "Archivo Black", sans-serif;
-  font-size: 4rem;
+  font-size: 4.5rem;
   letter-spacing: .2rem;
   // text-transform: uppercase; 
+  @media only screen and (max-width: 1000px) {
+    font-size: 4rem;
+  }
   @media only screen and (max-width: 800px) {
     font-size: 3rem;
   }
   @media only screen and (max-width: 400px) {
-    font-size: 2.75rem;
+    font-size: 2rem;
   }
 }
+
 h2 {
   font-weight: $bold;
   font-size: 2.25rem;
@@ -145,53 +165,42 @@ p {
 }
 
 .margin {
-  margin: $defaultPadding;
+  margin: $padding-2;
 }
 .margin2 {
-  margin: $largePadding;
+  margin: $padding-4;
 }
 .margin3 {
-  margin: $xLargePadding;
+  margin: $padding-6;
 }
 
 .pad {
-  padding: $defaultPadding;
+  padding: $padding-2;
 }
 .pad2 {
-  padding: $largePadding;
+  padding: $padding-4;
 }
 .pad3 {
-  padding: $xLargePadding;
+  padding: $padding-6;
 }
 
 .marginb {
-  margin-bottom: $defaultPadding;
+  margin-bottom: $padding-2;
 }
 .marginb2 {
-  margin-bottom: $largePadding;
+  margin-bottom: $padding-4;
 }
 .marginb3 {
-  margin-bottom: $xLargePadding;
+  margin-bottom: $padding-6;
 }
 .padb {
-  margin-bottom: $defaultPadding;
+  margin-bottom: $padding-2;
 }
 .padb2 {
-  padding-bottom: $largePadding;
+  padding-bottom: $padding-4;
 }
 .padb3 {
-  padding-bottom: $xLargePadding;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
+  padding-bottom: $padding-6;
 }
 
 button {
@@ -216,7 +225,7 @@ button p {
   flex-direction: column;
   align-items: center;
   background-color: $black;
-  padding-bottom: $xxLargePadding;
+  padding-bottom: $padding-6;
   background-image: linear-gradient(to top, $black 0%, $black 65%, $dark-purple 100%);
 }
 
@@ -226,18 +235,8 @@ button p {
   flex-direction: column;
   align-items: center;
   background-color: $black;
-  padding-top: $xxLargePadding;
-  padding-bottom: $xxLargePadding;
-}
-
-.container-pink {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  background-color: $pink;
-  padding-top: $xxLargePadding;
-  padding-bottom: $xxLargePadding;
+  padding-top: $padding-6;
+  padding-bottom: $padding-6;
 }
 
 .container-white {
@@ -246,8 +245,8 @@ button p {
   flex-direction: column;
   align-items: center;
   background-color: $white;
-  padding-top: $xxLargePadding;
-  padding-bottom: $xxLargePadding;
+  padding-top: $padding-6;
+  padding-bottom: $padding-6;
 }
 
 .container-align-center {
@@ -261,7 +260,7 @@ button p {
   align-items: center;
 }
 
-.ta-center {
+.center-text {
   text-align: center;
 }
 
@@ -280,7 +279,7 @@ button p {
   flex-direction: column;
   align-self: flex-start;
   justify-content: flex-start;
-  padding: $xxLargePadding;
+  padding: $padding-6;
 }
 
 .card-flex-wrap {
@@ -289,16 +288,16 @@ button p {
 }
 
 .nav-pad {
-  padding-top: calc($xxLargePadding + 6rem);
+  padding-top: calc($padding-6 + 6rem);
 }
 
 .admin-container {
-  padding: $xxLargePadding;
+  padding: $padding-6;
 }
 
 .big-img {
-  margin-top: $largePadding;
-  margin-bottom: $largePadding;
+  margin-top: $padding-4;
+  margin-bottom: $padding-4;
   height: 500px;
   width: min-content;
 }

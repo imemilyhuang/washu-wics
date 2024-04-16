@@ -7,7 +7,7 @@ import { Timestamp, addDoc, collection } from '@firebase/firestore';
 
 const EventEdit = () => {
   const [formData, setFormData] = useState({
-    title: "", subtitle: "", host: "WiCS", description: "", imagePath: "",
+    title: "", subtitle: "", host: "WiCS", description: "", location: "", imagePath: "",
     startTime: new Date(), endTime: new Date(), date: new Date().toISOString().split('T')[0]
   })
 
@@ -36,21 +36,21 @@ const EventEdit = () => {
       console.log("invalid start time")
     }
 
-    // const imageRef = ref(storage, `events/${formData.imagePath}`)
-    // uploadBytes(imageRef, file).then(async snapshot => {
-    //   const newDocRef = await addDoc(collection(db, "cities"), {
-    //     title: formData.title,
-    //     subtitle: formData.subtitle,
-    //     description: formData.description,
-    //     endTime: Timestamp.fromDate(formData.endTime),
-    //     startTime: Timestamp.fromDate(formData.startTime),
-    //     host: formData.host,
-    //     imagePath: formData.imagePath,
-    //     location: formData.location,
-    //   });
+    const imageRef = ref(storage, `events/${formData.imagePath}`)
+    uploadBytes(imageRef, file).then(async snapshot => {
+      const newDocRef = await addDoc(collection(db, "events"), {
+        title: formData.title,
+        subtitle: formData.subtitle,
+        description: formData.description,
+        endTime: Timestamp.fromDate(formData.endTime),
+        startTime: Timestamp.fromDate(formData.startTime),
+        host: formData.host,
+        imagePath: formData.imagePath,
+        location: formData.location,
+      });
 
-    //   console.log(newDocRef)
-    // }).catch(err => console.log(err))
+      console.log(newDocRef)
+    }).catch(err => console.log(err))
   }
 
   return (
@@ -72,6 +72,12 @@ const EventEdit = () => {
         type='text' name='description'
         placeholder='Description'
         value={formData.description}
+        onChange={handleChange}
+      />
+      <input
+        type='text' name='location'
+        placeholder='Location'
+        value={formData.location}
         onChange={handleChange}
       />
       <input

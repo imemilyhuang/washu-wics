@@ -7,6 +7,7 @@ const colors = {
     "orangePeach": "#FF7F56",
     "white": "#FFFFFF",
     "black": "#0B090B",
+
     // darkPurple: "#240432",
     // purple: "#5A257D",
     // lightPurple: "#8543D9",

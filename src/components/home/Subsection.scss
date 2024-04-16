@@ -2,11 +2,11 @@
 
 .subsection-card-img {
     height: 250px;
-    margin: $defaultPadding;
+    margin: $padding-2;
 }
 
 .card {
-    padding: $largePadding;
+    padding: $padding-4;
     border-radius: $buttonBorderRadius;
     width: 23rem;
     display: flex;
@@ -23,18 +23,27 @@
     background-position: right;
 }
 
+.container-pink {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: $pink;
+    padding-top: $padding-6;
+    padding-bottom: $padding-6;
+}
 
 .subsections-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: $section-big-width;
+    width: $section-76-width;
 
     @media only screen and (max-width: 1600px) {
-        width: $section-mid-big-width;
+        width: $section-66-width;
     }
     @media only screen and (max-width: 1250px) {
-        width: $section-mid-width;
+        width: $section-50-width;
     }
 }
 
@@ -49,7 +58,7 @@
 }
 
 .learn-more-button {
-    padding: $defaultPadding $largePadding;
+    padding: $padding-2 $padding-4;
     border-radius: 100px;
     cursor: pointer;
     background: linear-gradient(to left, $purple 0%, $light-purple 50%, $purple 100%);

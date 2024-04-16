@@ -5,17 +5,14 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: $section-big-width;
-    @media only screen and (max-width: 1600px) {
-        width: $section-mid-big-width;
-    }
-    @media only screen and (max-width: 1250px) {
-        width: $section-mid-width;
+    width: $section-76-width;
+    
+    @media only screen and (max-width: 1300px) {
+        width: $section-66-width;
     }
     @media only screen and (max-width: 1000px) {
-        width: $section-mid-width;
+        width: $section-50-width;
         flex-direction: column;
-
     }
 }
 
@@ -27,7 +24,7 @@
 
 .call-to-action-button {
     // background-color: $light-purple;
-    padding: $defaultPadding $largePadding;
+    padding: $padding-2 $padding-4;
     border-radius: 100px;
     cursor: pointer;
     background: linear-gradient(to left, $light-purple 0%, $pink 50%, $light-purple 100%);
@@ -40,9 +37,8 @@
 }
 
 .max-width-container {
-    width: $section-big-width;
+    width: $section-76-width;
 }
-
 
 .hero-logo {
     height: 500px;
@@ -58,6 +54,7 @@ button p {
     overflow: hidden; /* Clip overflowing content */
     cursor: default;
 }
+
 .overlay-text {
     position: absolute; /* Position text on top */
     top: 0;

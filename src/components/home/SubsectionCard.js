@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const SubsectionCard = ({data}) => {
   return (
     <div className='container-align-center card'>
-      <h3 className='padb white-text ta-center'>{data.title}</h3>
+      <h3 className='padb white-text center-text'>{data.title}</h3>
       {/* <div className='subsection-card-img' /> */}
       <img 
         alt='subsection'

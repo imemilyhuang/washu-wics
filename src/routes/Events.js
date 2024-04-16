@@ -7,7 +7,7 @@ const Events = () => {
   const [events, setEvents] = useState([])
 
   useEffect(() => {
-    const q = query(collection(db, "events"), orderBy("startTime"))
+    const q = query(collection(db, "events"), orderBy("startTime", "desc"))
     const unsubscribe = onSnapshot(q, res => {
       let newDocs = []
       res.docs.forEach(doc => {
@@ -29,10 +29,17 @@ const Events = () => {
 
   return (
     <div className='full-left-container nav-pad'>
-      <h1>Events</h1>
+      <h1>Upcoming Events</h1>
       <div className='card-flex-wrap'>
         {
-          events.map(data => <EventComponent data={data} key={data.id} />)
+          events.map(data => data.startTime >= new Date() ? <EventComponent data={data} key={data.id} /> : null)
+        }
+      </div>
+
+      <h1>Past Events</h1>
+      <div className='card-flex-wrap'>
+        {
+          events.map(data => data.startTime < new Date() ? <EventComponent data={data} key={data.id} /> : null)
         }
       </div>
     </div>

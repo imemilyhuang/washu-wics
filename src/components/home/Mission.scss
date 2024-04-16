@@ -4,13 +4,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: $section-big-width;
-    padding: $largePadding;
+    width: $section-76-width;
+    padding: $padding-4;
     @media only screen and (max-width: 1600px) {
-        width: $section-mid-big-width;
+        width: $section-66-width;
     }
     @media only screen and (max-width: 1250px) {
-        width: $section-mid-width;
+        width: $section-50-width;
     }
     @media only screen and (max-width: 1000px) {
         width: 100%;

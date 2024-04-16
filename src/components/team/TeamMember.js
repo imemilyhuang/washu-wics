@@ -4,7 +4,7 @@ import { storage } from '../../firebase'
 import "./TeamMember.scss"
 
 const TeamMember = ({data}) => {
-  const [image, setImage] = useState(process.env.PUBLIC_URL+"/assets/default.png")
+  const [image, setImage] = useState(process.env.PUBLIC_URL+"/assets/default-pfp.png")
   useEffect(() => {
     if (data.imagePath!=="default") {
       const pathRef = ref(storage, `team/${data.imagePath}`)
@@ -21,8 +21,8 @@ const TeamMember = ({data}) => {
   return <a href={data?.link} target="_blank" rel="noopener noreferrer">
     <div className='pad2 t-card'>
       <img className='execPic marginb' src={image} alt={data.name} />
-      <h4 className='padb ta-center'>{data.name}</h4>
-      <p className='ta-center purple-text'>{data.title}</p>
+      <h4 className='padb center-text'>{data.name}</h4>
+      <p className='center-text purple-text'>{data.title}</p>
     </div>
   </a> 
 }

@@ -14,14 +14,14 @@ const Hero = () => {
           <HoverClipText baseColor={colors.white} accentColor={colors.pink} text="Women in CS" />
           <HoverClipText baseColor={colors.lightPurple} accentColor={colors.pink} text="at WashU" />
           <div className='padb'></div>
-          <h4 className='padb2 white-text'>Bolster. Support. Empower</h4>
-          <Link to="/contact">
+          <h4 className='padb2 white-text'>Bolster. Support. Empower.</h4>
+          <Link to="/events">
             <button className='call-to-action-button marginb3'>
-              <p>Get connected</p>
+              <p>Get Involved</p>
             </button>
           </Link>
 
-          <h5 className='padb white-text'>This Year's Sponsors</h5>
+          <h4 className='padb white-text'>This year's sponsors</h4>
           <div className='logo-container justify-flex-start'>
           { data.map(image => 
                 <a href={image.link} key={image.link}>

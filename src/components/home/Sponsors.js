@@ -16,9 +16,22 @@ const Sponsors = () => {
   return (
     <div className='container-white'>
       <div className='mission-container'>
-        <h1 className='padb'>Past Sponsors</h1>
-        <p className='padb2'>_____</p>
-        <p className='padb2'>Will make another page for this</p>
+        <h1 className='padb'>Past sponsors</h1>
+        <div
+          style={{
+            width: "6rem",
+            height: "0.25rem",
+            borderRadius:"5rem",
+            backgroundColor:"black"
+          }}
+          className='marginb2'
+        >
+        </div>
+
+        <p className='padb2'>
+          A collection of the companies and organizations we've worked with in 
+          past years
+        </p>
         <div className='logo-container'>
           {
             data.map(image => 
