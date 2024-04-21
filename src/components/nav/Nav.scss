@@ -31,7 +31,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: $padding-4 $padding-4;
+    padding: $space-4 $space-4;
     height: 6rem;
     position: absolute;
 }
@@ -45,7 +45,7 @@
 
 .foot-container {
     margin-top: auto;
-    padding: $padding-4;
+    padding: $space-4;
     background-color: $black;
     display: flex;
     flex-direction: row;

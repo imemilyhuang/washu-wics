@@ -13,7 +13,7 @@ const SubsectionCard = ({data}) => {
         className='subsection-card-img padb2'
       />
       <Link to={data.link}>
-        <button className='learn-more-button'><p>Learn more</p></button></Link>
+        <button className='learn-more-button'><h4>Learn more</h4></button></Link>
     </div>
   )
 }

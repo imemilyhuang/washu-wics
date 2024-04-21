@@ -16,10 +16,10 @@ $orange-peach: #FF7F56;
 $white: #FFFFFF;
 $black: #0B090B;
 
-$padding-1: 1rem;
-$padding-2: 2rem;
-$padding-4: 4rem;
-$padding-6: 6rem;
+$space-1: 1rem;
+$space-2: 2rem;
+$space-4: 4rem;
+$space-6: 6rem;
 
 $section-76-width: 76rem;
 $section-66-width: 66rem;
@@ -165,42 +165,43 @@ p {
 }
 
 .margin {
-  margin: $padding-2;
+  margin: $space-2;
 }
 .margin2 {
-  margin: $padding-4;
+  margin: $space-4;
 }
 .margin3 {
-  margin: $padding-6;
+  margin: $space-6;
 }
 
 .pad {
-  padding: $padding-2;
+  padding: $space-2;
 }
 .pad2 {
-  padding: $padding-4;
+  padding: $space-4;
 }
 .pad3 {
-  padding: $padding-6;
+  padding: $space-6;
 }
 
 .marginb {
-  margin-bottom: $padding-2;
+  margin-bottom: $space-2;
 }
 .marginb2 {
-  margin-bottom: $padding-4;
+  margin-bottom: $space-4;
 }
 .marginb3 {
-  margin-bottom: $padding-6;
+  margin-bottom: $space-6;
 }
+
 .padb {
-  margin-bottom: $padding-2;
+  margin-bottom: $space-2;
 }
 .padb2 {
-  padding-bottom: $padding-4;
+  padding-bottom: $space-4;
 }
 .padb3 {
-  padding-bottom: $padding-6;
+  padding-bottom: $space-6;
 }
 
 button {
@@ -219,13 +220,18 @@ button p {
   font-size: 1rem;
 }
 
+button h4 {
+  color: $white;
+  font-weight: $bold;
+}
+
 .container-dark-gradient {
   display: flex;
   width: 100%;
   flex-direction: column;
   align-items: center;
   background-color: $black;
-  padding-bottom: $padding-6;
+  padding-bottom: $space-6;
   background-image: linear-gradient(to top, $black 0%, $black 65%, $dark-purple 100%);
 }
 
@@ -235,8 +241,8 @@ button p {
   flex-direction: column;
   align-items: center;
   background-color: $black;
-  padding-top: $padding-6;
-  padding-bottom: $padding-6;
+  padding-top: $space-6;
+  padding-bottom: $space-6;
 }
 
 .container-white {
@@ -245,8 +251,8 @@ button p {
   flex-direction: column;
   align-items: center;
   background-color: $white;
-  padding-top: $padding-6;
-  padding-bottom: $padding-6;
+  padding-top: $space-6;
+  padding-bottom: $space-6;
 }
 
 .container-align-center {
@@ -279,7 +285,7 @@ button p {
   flex-direction: column;
   align-self: flex-start;
   justify-content: flex-start;
-  padding: $padding-6;
+  padding: $space-6;
 }
 
 .card-flex-wrap {
@@ -288,16 +294,16 @@ button p {
 }
 
 .nav-pad {
-  padding-top: calc($padding-6 + 6rem);
+  padding-top: 10rem;
 }
 
 .admin-container {
-  padding: $padding-6;
+  padding: $space-6;
 }
 
 .big-img {
-  margin-top: $padding-4;
-  margin-bottom: $padding-4;
+  margin-top: $space-4;
+  margin-bottom: $space-4;
   height: 500px;
   width: min-content;
 }

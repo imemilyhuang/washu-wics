@@ -10,38 +10,39 @@ const Hero = () => {
   return (
     <div className='nav-pad container-dark-gradient'>
       <div className='hero-container padb2'>
-        <div>
-          <HoverClipText baseColor={colors.white} accentColor={colors.pink} text="Women in CS" />
-          <HoverClipText baseColor={colors.lightPurple} accentColor={colors.pink} text="at WashU" />
-          <div className='padb'></div>
+        <div style={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
+          <div className="marginb title-text-container">
+            <HoverClipText baseColor={colors.white} accentColor={colors.pink} text="Women in CS" />
+            <HoverClipText baseColor={colors.lightPurple} accentColor={colors.pink} text="at WashU" />
+          </div>
           <h4 className='padb2 white-text'>Bolster. Support. Empower.</h4>
           <Link to="/events">
-            <button className='call-to-action-button marginb3'>
-              <p>Get Involved</p>
+            <button className='call-to-action-button'>
+              <h4>Get Involved</h4>
             </button>
           </Link>
-
-          <h4 className='padb white-text'>This year's sponsors</h4>
-          <div className='logo-container justify-flex-start'>
-          { data.map(image => 
-                <a href={image.link} key={image.link}>
-                  <img 
-                    alt='sponsor'
-                    src={process.env.PUBLIC_URL+"/assets/sponsors/"+image.imagePath}
-                    className='sponsor-img'
-                  />
-                </a>
-                )
-              }
-          </div>
-
-
         </div>
+
         <img 
-          src={process.env.PUBLIC_URL+"/assets/home/computer.png"}
-          className='hero-logo' alt='logo'
+          src={process.env.PUBLIC_URL+"/assets/home/group.png"}
+          className='hero-logo' alt='group of women'
         />
+        
       </div>
+
+        <h4 className='padb white-text'>This Year's Sponsors</h4>
+        <div className='logo-container justify-flex-start'>
+          { data.map(image => 
+          <a href={image.link} key={image.link}>
+            <img
+              alt='sponsor'
+              src={process.env.PUBLIC_URL+"/assets/sponsors/"+image.imagePath}
+              className='sponsor-img'
+            />
+          </a>
+          )
+        }
+        </div>
 
       
     </div>

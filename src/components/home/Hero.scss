@@ -10,9 +10,20 @@
     @media only screen and (max-width: 1300px) {
         width: $section-66-width;
     }
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: 1200px) {
         width: $section-50-width;
         flex-direction: column;
+    }
+}
+
+.title-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    @media only screen and (max-width: 1200px) {
+        align-items: center;
     }
 }
 
@@ -24,8 +35,8 @@
 
 .call-to-action-button {
     // background-color: $light-purple;
-    padding: $padding-2 $padding-4;
-    border-radius: 100px;
+    padding: $space-2;
+    border-radius: 10rem;
     cursor: pointer;
     background: linear-gradient(to left, $light-purple 0%, $pink 50%, $light-purple 100%);
     background-size: 200%;
@@ -41,12 +52,11 @@
 }
 
 .hero-logo {
-    height: 500px;
-}
+    height: 36rem;
 
-button p {
-    color: $white;
-    font-weight: $bold;
+    @media only screen and (max-width: 1300px) {
+        height: 28rem;
+    }
 }
 
 .text-container {
