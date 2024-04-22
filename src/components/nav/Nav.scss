@@ -11,21 +11,22 @@
 }
 
 .expanded-nav-control {
-    width: $section-76-width;
+    width: 100%;
+    max-width: 60rem;
+    
+    @media only screen and (max-width: 1000px) {
+        max-width: 50rem;
+    }
+    @media only screen and (max-width: 900px) {
+        max-width: $section-50-width;
+    }
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 1.4rem 3rem;
+    margin: 1.4rem 6rem;
     
-    @media only screen and (max-width: 1300px) {
-        width: $section-66-width;
-    }
-    @media only screen and (max-width: 1200px) {
-        width: $section-50-width;
-        flex-direction: column;
-    }
 }
 
 .hamburger-nav-control {
@@ -33,9 +34,10 @@
     flex: 1;
     justify-content: space-between;
     align-items: center;
-    margin: 1.4rem 2rem;
-    max-width: 76rem;
-  }
+    margin: 1.4rem 6rem;
+    max-width: 60rem;
+    width: 100%;
+}
 
 .big-container {
     width: 100%;
