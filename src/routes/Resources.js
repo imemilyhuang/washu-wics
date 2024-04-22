@@ -24,10 +24,10 @@ const Resources = () => {
       <h1>Resources</h1>
       <img 
         alt='contact'
-        src={process.env.PUBLIC_URL+"/assets/home/connected.png"}
+        src={process.env.PUBLIC_URL+"/assets/home/girl-with-laptop.png"}
         className='big-img'
       />
-      <h4>Information about achievements</h4>
+      <h4>Achievements in Technology</h4>
       <ul className='padb'>
         {
           achievements.map(data =>
@@ -43,7 +43,7 @@ const Resources = () => {
           )
         }
       </ul>
-      <h4>Useful links</h4>
+      <h4>Useful Links</h4>
       <ul className='padb'>
         {
           usefulLinks.map(data =>
