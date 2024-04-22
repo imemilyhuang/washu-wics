@@ -16,11 +16,6 @@ $orange-peach: #FF7F56;
 $white: #FFFFFF;
 $black: #0B090B;
 
-$space-1: 1rem;
-$space-2: 2rem;
-$space-4: 4rem;
-$space-6: 6rem;
-
 $section-76-width: 76rem;
 $section-66-width: 66rem;
 $section-50-width: 50rem;
@@ -66,51 +61,41 @@ a:hover {
 }
 
 h1 {
-  font-size: 4.5rem;
-  letter-spacing: .2rem;
-  // text-transform: uppercase; 
-  @media only screen and (max-width: 1000px) {
-    font-size: 4rem;
-  }
-  @media only screen and (max-width: 800px) {
-    font-size: 3rem;
-  }
-  @media only screen and (max-width: 400px) {
+  font-size: 3rem;
+  font-weight: $bold;
+  @media only screen and (max-width: 700px) {
     font-size: 2rem;
+  }
+  @media only screen and (max-width: 550) {
+    font-size: 1.8rem;
   }
 }
 
 h2 {
+  font-size: 2.6rem;
   font-weight: $bold;
-  font-size: 2.25rem;
-  @media only screen and (max-width: 800px) {
-    font-size: 2rem;
+  @media only screen and (max-width: 700px) {
+    font-size: 1.8rem;
   }
-  @media only screen and (max-width: 400px) {
-    font-size: 1.5rem;
+  @media only screen and (max-width: 550px) {
+    font-size: 1.6rem;
   }
 }
 h3 {
+  font-size: 2rem;
   font-weight: $bold;
-  font-size: 1.85rem;
-  @media only screen and (max-width: 800px) {
-    font-size: 1.65rem;
+  @media only screen and (max-width: 700px) {
+    font-size: 1.6rem;
   }
-  @media only screen and (max-width: 400px) {
-    font-size: 1.5rem;
+  @media only screen and (max-width: 550px) {
+    font-size: 1.4rem;
   }
-}
-.semiBold {
-  font-weight: $semiBold;
 }
 h4 {
+  font-size: 1.2rem;
   font-weight: $semiBold;
-  font-size: 1.3rem;
-  @media only screen and (max-width: 800px) {
-    font-size: 1.2rem;
-  }
-  @media only screen and (max-width: 400px) {
-    font-size: 0.9rem;
+  @media only screen and (max-width: 700px) {
+    font-size: 1rem;
   }
 }
 h5 {
@@ -124,15 +109,8 @@ h5 {
   }
 }
 
-h2.evenSmaller {
-  font-weight: $bold;
-  font-size: 1.125rem;
-  @media only screen and (max-width: 800px) {
-    font-size: 1rem;
-  }
-  @media only screen and (max-width: 400px) {
-    font-size: 0.875rem;
-  }
+.semiBold {
+  font-weight: $semiBold;
 }
 
 .subtitle {
@@ -165,43 +143,61 @@ p {
 }
 
 .margin {
-  margin: $space-2;
+  margin: 2rem;
 }
 .margin2 {
-  margin: $space-4;
+  margin: 4rem;
 }
 .margin3 {
-  margin: $space-6;
+  margin: 6rem;
 }
 
 .pad {
-  padding: $space-2;
+  padding: 2rem;
 }
 .pad2 {
-  padding: $space-4;
+  padding: 4rem;
 }
 .pad3 {
-  padding: $space-6;
+  padding: 6rem;
+}
+
+.padding642 {
+  padding: 6rem;
+
+  @media only screen and (max-width: 900px) {
+    padding: 4rem;
+  }
+
+  @media only screen and (max-width: 700px) {
+    padding: 2rem;
+  }
 }
 
 .marginb {
-  margin-bottom: $space-2;
+  margin-bottom: 1rem;
 }
 .marginb2 {
-  margin-bottom: $space-4;
+  margin-bottom: 2rem;
 }
-.marginb3 {
-  margin-bottom: $space-6;
+.marginb4 {
+  margin-bottom: 4rem;
+}
+.marginb6 {
+  margin-bottom: 6rem;
 }
 
 .padb {
-  margin-bottom: $space-2;
+  margin-bottom: 1rem;
 }
 .padb2 {
-  padding-bottom: $space-4;
+  padding-bottom: 2rem;
 }
-.padb3 {
-  padding-bottom: $space-6;
+.padb4 {
+  padding-bottom: 4rem;
+}
+.padb6 {
+  padding-bottom: 6rem;
 }
 
 button {
@@ -216,13 +212,8 @@ button {
   -moz-osx-font-smoothing: grayscale;
 }
 
-button p {
-  font-size: 1rem;
-}
-
 button h4 {
   color: $white;
-  font-weight: $bold;
 }
 
 .container-dark-gradient {
@@ -231,7 +222,7 @@ button h4 {
   flex-direction: column;
   align-items: center;
   background-color: $black;
-  padding-bottom: $space-6;
+  padding-bottom: 4rem;
   background-image: linear-gradient(to top, $black 0%, $black 65%, $dark-purple 100%);
 }
 
@@ -241,8 +232,8 @@ button h4 {
   flex-direction: column;
   align-items: center;
   background-color: $black;
-  padding-top: $space-6;
-  padding-bottom: $space-6;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .container-white {
@@ -251,8 +242,8 @@ button h4 {
   flex-direction: column;
   align-items: center;
   background-color: $white;
-  padding-top: $space-6;
-  padding-bottom: $space-6;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .container-align-center {
@@ -285,7 +276,7 @@ button h4 {
   flex-direction: column;
   align-self: flex-start;
   justify-content: flex-start;
-  padding: $space-6;
+  padding: 6rem;
 }
 
 .card-flex-wrap {
@@ -293,17 +284,13 @@ button h4 {
   flex-wrap: wrap;
 }
 
-.nav-pad {
-  padding-top: 10rem;
-}
-
 .admin-container {
-  padding: $space-6;
+  padding: 6rem;
 }
 
 .big-img {
-  margin-top: $space-4;
-  margin-bottom: $space-4;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   height: 500px;
   width: min-content;
 }

@@ -10,7 +10,7 @@ const SubsectionCard = ({data}) => {
       <img 
         alt='subsection'
         src={process.env.PUBLIC_URL+data.img}
-        className='subsection-card-img padb2'
+        className='subsection-card-img padb4'
       />
       <Link to={data.link}>
         <button className='learn-more-button'><h4>Learn more</h4></button></Link>

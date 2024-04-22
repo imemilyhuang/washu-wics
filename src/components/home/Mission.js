@@ -17,7 +17,7 @@ const Mission = () => {
         >
         </div>
 
-        <p className='center-text padb2'>
+        <p className='center-text padb4'>
           Our mission is to create a welcoming and supportive community 
           for women in computing, bolster professional development by 
           providing networking and mentorship opportunities, and inspire 

@@ -5,24 +5,28 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: $section-76-width;
+    width: 100%;
+    max-width: 60rem;
     
-    @media only screen and (max-width: 1300px) {
-        width: $section-66-width;
+    @media only screen and (max-width: 1000px) {
+        max-width: 50rem;
     }
-    @media only screen and (max-width: 1200px) {
-        width: $section-50-width;
+    @media only screen and (max-width: 900px) {
+        max-width: $section-50-width;
+
+    @media only screen and (max-width: 1000px) {
         flex-direction: column;
+    }
     }
 }
 
-.title-text-container {
+.column-align-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: 1000px) {
         align-items: center;
     }
 }
@@ -35,7 +39,7 @@
 
 .call-to-action-button {
     // background-color: $light-purple;
-    padding: $space-2;
+    padding: 1.5rem 2rem;
     border-radius: 10rem;
     cursor: pointer;
     background: linear-gradient(to left, $light-purple 0%, $pink 50%, $light-purple 100%);
@@ -52,10 +56,16 @@
 }
 
 .hero-logo {
-    height: 36rem;
+    width: 40%;
+    object-fit: contain;
 
     @media only screen and (max-width: 1300px) {
         height: 28rem;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        height: 100%;
+        margin-top: 4rem;
     }
 }
 

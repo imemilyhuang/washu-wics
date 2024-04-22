@@ -11,7 +11,7 @@ const Subsections = () => {
     <div className='container-dark'>
       <div className='subsections-container'>
         <h1 className='pad white-text'>Get involved with WiCS</h1>
-        <p className='padb2'>_____</p>
+        <p className='padb4'>_____</p>
         <div className='items-container'>
           {
             subsectionCardData.map(card => <SubsectionCard data={card} key={card.title} />)

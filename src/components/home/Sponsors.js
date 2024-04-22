@@ -28,7 +28,7 @@ const Sponsors = () => {
         >
         </div>
 
-        <p className='padb2'>
+        <p className='padb4'>
           A collection of the companies and organizations we've worked with in 
           past years
         </p>

@@ -2,11 +2,11 @@
 
 .subsection-card-img {
     height: 250px;
-    margin: $space-2;
+    margin: 2rem;
 }
 
 .card {
-    padding: $space-4;
+    padding: 4rem;
     border-radius: $buttonBorderRadius;
     width: 23rem;
     display: flex;
@@ -29,8 +29,8 @@
     flex-direction: column;
     align-items: center;
     background-color: $pink;
-    padding-top: $space-6;
-    padding-bottom: $space-6;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }
 
 .subsections-container {
@@ -58,7 +58,7 @@
 }
 
 .learn-more-button {
-    padding: $space-2;
+    padding: 2rem;
     border-radius: 100px;
     cursor: pointer;
     background: linear-gradient(to left, $purple 0%, $light-purple 50%, $purple 100%);

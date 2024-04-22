@@ -8,14 +8,14 @@ const Hero = () => {
   const data = [{imagePath:"lacrm-white.png", link: "https://www.lessannoyingcrm.com/"},{imagePath:"spectrum-white.png", link: "https://www.spectrum.com/"}]
 
   return (
-    <div className='nav-pad container-dark-gradient'>
-      <div className='hero-container padb2'>
-        <div style={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
-          <div className="marginb title-text-container">
+    <div className='padding642 container-dark-gradient'>
+      <div className='hero-container padb4'>
+        <div className="column-align-container">
+          <div className="marginb column-align-container">
             <HoverClipText baseColor={colors.white} accentColor={colors.pink} text="Women in CS" />
             <HoverClipText baseColor={colors.lightPurple} accentColor={colors.pink} text="at WashU" />
           </div>
-          <h4 className='padb2 white-text'>Bolster. Support. Empower.</h4>
+          <h4 className='padb4 white-text'>Bolster. Support. Empower.</h4>
           <Link to="/events">
             <button className='call-to-action-button'>
               <h4>Get Involved</h4>
