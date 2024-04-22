@@ -6,8 +6,8 @@ const Footer = () => {
   const footerIconData = [
     {link: "mailto:wics@su.wustl.edu", imagePath: "email.png"},
     {link: "https://github.com/washuwics", imagePath: "github.png"},
-    {link: "https://www.facebook.com/WashUWiCS", imagePath: "facebook.png"},
     {link: "https://www.instagram.com/washuwics/?hl=en", imagePath: "instagram.png"},
+    {link: "https://www.facebook.com/WashUWiCS", imagePath: "facebook.png"},
   ]
 
   const pageLinks1 = [
