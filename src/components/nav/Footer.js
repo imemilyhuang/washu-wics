@@ -7,6 +7,7 @@ const Footer = () => {
     {link: "mailto:wics@su.wustl.edu", imagePath: "email.png"},
     {link: "https://github.com/washuwics", imagePath: "github.png"},
     {link: "https://www.instagram.com/washuwics/?hl=en", imagePath: "instagram.png"},
+    {link: "https://open.spotify.com/playlist/5egd8AUAuq2eh5ybxjgxes?si=AZqdCFvvQvqzLRuQ49wY0g&pi=u-UVI6g-W5RkK8&nd=1&dlsi=fb688ebdb4c74cb3", imagePath: "spotify.png"},
     {link: "https://www.facebook.com/WashUWiCS", imagePath: "facebook.png"},
   ]
 
