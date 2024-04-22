@@ -18,11 +18,11 @@ const Mission = () => {
         </div>
 
         <p className='center-text padb4'>
-          Our mission is to create a welcoming and supportive community 
-          for women in computing, bolster professional development by 
-          providing networking and mentorship opportunities, and inspire 
-          future generations of women by giving back to the greater 
-          St. Louis community.
+          Our mission is to <span className='bold'>create</span> a welcoming and supportive 
+          community for women in computing, <span className='bold'>bolster</span> professional
+          development by providing networking and mentorship opportunities,
+          and <span className='bold'>inspire</span> future generations of women by giving 
+          back to the greater St. Louis community.
         </p>
         <img 
           alt='subsection'
