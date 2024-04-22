@@ -33,13 +33,13 @@ const Team = () => {
 
   return (
     <div className='full-left-container nav-pad'>
-      <h1>Executive Board</h1>
+      <h1 className='padb'>Executive Board</h1>
       <div className='card-flex-wrap'>
         {
           teamMembers.map(data => <TeamMember data={data} key={data.id} />)
         }
       </div>
-      <h2>Alumni</h2>
+      <h2 className='padb'>Alumni</h2>
       <div className='card-flex-wrap'>
         {
           alumni.map(data => <TeamMember data={data} key={data.id} />)
