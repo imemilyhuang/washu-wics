@@ -26,7 +26,7 @@ const Mission = () => {
         </p>
         <img 
           alt='subsection'
-          src={process.env.PUBLIC_URL+"/assets/home/GHC1.jpeg"}
+          src={process.env.PUBLIC_URL+"/assets/home/girl-with-laptop.png"}
           className='subsection-card-img'
         />
       </div>

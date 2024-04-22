@@ -20,7 +20,7 @@ const StayConnected = () => {
   return (
     <div className='container-pink'>
       <div className='mission-container'>
-        <h1 className='padb center-text'>Stay connected</h1>
+        <h1 className='padb center-text'>Stay Connected</h1>
         
         <div
           style={{

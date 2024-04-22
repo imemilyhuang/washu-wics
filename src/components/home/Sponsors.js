@@ -16,7 +16,7 @@ const Sponsors = () => {
   return (
     <div className='container-white'>
       <div className='mission-container'>
-        <h1 className='padb'>Past sponsors</h1>
+        <h1 className='padb'>Past Sponsors</h1>
         <div
           style={{
             width: "6rem",

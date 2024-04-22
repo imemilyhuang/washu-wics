@@ -36,7 +36,7 @@ const NavBar = () => {
     <nav className='nav-container'>
       <div className={width > 1000 ? "expanded-nav-control" : "hamburger-nav-control"}>
         <Link to="/" className='link'>
-          <h2>WashU WiCS</h2>
+          <h3>WashU WiCS</h3>
         </Link>
 
         {width > 1100 &&
