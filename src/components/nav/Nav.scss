@@ -7,15 +7,25 @@
     grid-row-end: 2;
     position: absolute;
     height: 6rem;
+    width: 100%;
 }
 
 .expanded-nav-control {
+    width: $section-76-width;
+
     display: flex;
-    flex: 1;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin: 1.4rem 3rem;
-    max-width: 76rem;
+    
+    @media only screen and (max-width: 1300px) {
+        width: $section-66-width;
+    }
+    @media only screen and (max-width: 1200px) {
+        width: $section-50-width;
+        flex-direction: column;
+    }
 }
 
 .hamburger-nav-control {
