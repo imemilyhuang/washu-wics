@@ -5,15 +5,22 @@ import TeamMember from '../components/team/TeamMember'
 
 const Team = () => {
   const [teamMembers, setTeamMembers] = useState([])
+  const [alumni, setAlumni] = useState([])
 
   useEffect(() => {
     const q = query(collection(db, "team"), orderBy("order", "asc"))
     const unsubscribe = onSnapshot(q, res => {
       let newDocs = []
+      let newAlumni = []
       res.docs.forEach(doc => {
-        newDocs.push({...doc.data(), id: doc.id})
+        if (doc.data()?.alumni) {
+          newAlumni.push({...doc.data(), id: doc.id})
+        } else {
+          newDocs.push({...doc.data(), id: doc.id})
+        }
       })
 
+      setAlumni(newAlumni)
       setTeamMembers(newDocs)
     })
     
@@ -22,7 +29,7 @@ const Team = () => {
     }
   }, [])
 
-  // console.log(teamMembers)
+  console.log(teamMembers)
 
   return (
     <div className='full-left-container nav-pad'>
@@ -30,6 +37,12 @@ const Team = () => {
       <div className='card-flex-wrap'>
         {
           teamMembers.map(data => <TeamMember data={data} key={data.id} />)
+        }
+      </div>
+      <h2>Alumni</h2>
+      <div className='card-flex-wrap'>
+        {
+          alumni.map(data => <TeamMember data={data} key={data.id} />)
         }
       </div>
     </div>
