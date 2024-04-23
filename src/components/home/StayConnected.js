@@ -36,14 +36,14 @@ const StayConnected = () => {
           Follow WashU WiCS on Instagram to stay updated with the latest events, programs, and resources.
         </p>
 
-        <div className="margin-bottom-2 grid-3-column">
+        <div className="margin-bottom-2 instagram-feed-grid">
         {
           feed.map(data => <InstaPost data={data} key={data.link} />)
         }
         </div>
 
         <a href={`https://www.instagram.com/washuwics/`} target="_blank" rel="noopener noreferrer">
-          <button className='learn-more-button'>
+          <button className='purple-gradient-button'>
             <h4>View More</h4>
           </button>
         </a>

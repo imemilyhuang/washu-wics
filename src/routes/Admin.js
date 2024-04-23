@@ -20,7 +20,7 @@ const Admin = () => {
       <h3>Manage team members</h3>
       <ManageTeamMember />
       <div className='marginb2'/>
-      <button className='learn-more-button' style={{width: "12rem"}} onClick={logout}><p>Log out</p></button>
+      <button className='purple-gradient-button' style={{width: "12rem"}} onClick={logout}><p>Log out</p></button>
     </div>
   )
 }

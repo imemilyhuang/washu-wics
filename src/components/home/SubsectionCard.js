@@ -14,7 +14,7 @@ const SubsectionCard = ({data}) => {
         <h3 className="white-text center-text margin-bottom-21">{data.title}</h3>
         <p className="white-text center-text margin-bottom-21">{data.bodyCopy}</p>
         <Link to={data.link}>
-          <button className='learn-more-button'><h4>Learn More</h4></button>
+          <button className='purple-gradient-button'><h4>Learn More</h4></button>
         </Link>
       </div>
     </div>

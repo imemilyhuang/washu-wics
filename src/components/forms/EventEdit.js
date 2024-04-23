@@ -100,7 +100,7 @@ const EventEdit = () => {
       <TimePicker formData={formData} setFormData={setFormData} name={"startTime"} />
       <p>End Time</p>
       <TimePicker formData={formData} setFormData={setFormData} name={"endTime"} />
-      <button type='button' onClick={handleSubmit} className='learn-more-button' style={{width: "12rem"}}><p>Create</p></button>
+      <button type='button' onClick={handleSubmit} className='purple-gradient-button' style={{width: "12rem"}}><p>Create</p></button>
     </form>
   )
 }

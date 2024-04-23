@@ -209,9 +209,13 @@ h1::selection {
   flex-wrap: wrap;
 }
 
-.grid-3-column {
+.instagram-feed-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+
+  @media only screen and (max-width: 700px) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* margins ------------------------------------------------ */

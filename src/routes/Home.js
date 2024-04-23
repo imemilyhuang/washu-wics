@@ -9,8 +9,8 @@ const Home = () => {
   return (
     <div className="fixed-flex-column">
       <Hero />
-      {/* <Mission /> */}
-      {/* <Subsections /> */}
+      <Mission />
+      <Subsections />
       <Sponsors />
       <StayConnected />
     </div>

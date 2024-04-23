@@ -11,7 +11,7 @@ const Subsections = () => {
     <div className="flex-column-center subsections-container comfy-padding-642">
       <div className="flex-column-center">
         <h1 className='white-text'>Get Involved with WiCS</h1>
-        <div className='items-container'>
+        <div className="cards-container">
           {
             subsectionCardData.map(card => <SubsectionCard data={card} key={card.title} />)
           }
