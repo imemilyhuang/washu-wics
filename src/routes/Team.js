@@ -66,6 +66,20 @@ const Team = () => {
         {
           alumni.map(data => <TeamMember data={data} key={data.id} />)
         }
+
+      <div className="comfy-padding-642">
+        <h1 className="padding-21">Current Exec Board</h1>
+        <div className='little-grid'>
+          {
+            teamMembers.map(data => <TeamMember data={data} key={data.id} />)
+          }
+        </div>
+        <h2 className="padding-21">Alumni</h2>
+        <div className='little-grid'>
+          {
+            alumni.map(data => <TeamMember data={data} key={data.id} />)
+          }
+        </div>
       </div>
     </div>
   )
