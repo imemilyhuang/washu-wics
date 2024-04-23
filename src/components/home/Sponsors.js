@@ -14,9 +14,9 @@ const Sponsors = () => {
   ]
 
   return (
-    <div className='container-white'>
-      <div className='mission-container'>
-        <h1 className='padb'>Past Sponsors</h1>
+    <div className="flex-column-center comfy-padding-642">
+      <div className="flex-column-center">
+        <h1 className="margin-bottom-1">Past Sponsors</h1>
         <div
           style={{
             width: "6rem",
@@ -24,13 +24,12 @@ const Sponsors = () => {
             borderRadius:"5rem",
             backgroundColor:"black"
           }}
-          className='marginb2'
+          className="margin-bottom-21"
         >
         </div>
 
-        <p className='padb4'>
-          A collection of the companies and organizations we've worked with in 
-          past years
+        <p className="margin-bottom-42">
+          The companies and organizations we've worked with in past years.
         </p>
         <div className='sponsor-container'>
           {

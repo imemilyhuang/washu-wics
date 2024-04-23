@@ -4,16 +4,19 @@ import { Link } from 'react-router-dom'
 
 const SubsectionCard = ({data}) => {
   return (
-    <div className='container-align-center card'>
-      <h3 className="white-text center-text margin-bottom-21">{data.title}</h3>
-      {/* <div className='subsection-card-img' /> */}
+    <div className="card padding-2">
       <img 
-        alt='subsection'
+        alt='Image'
         src={process.env.PUBLIC_URL+data.img}
-        className='subsection-card-img padb4'
+        className="subsection-card-img margin-bottom-42"
       />
-      <Link to={data.link}>
-        <button className='learn-more-button'><h4>Learn more</h4></button></Link>
+      <div className="flex-column-center">
+        <h3 className="white-text center-text margin-bottom-21">{data.title}</h3>
+        <p className="white-text center-text margin-bottom-21">{data.bodyCopy}</p>
+        <Link to={data.link}>
+          <button className='learn-more-button'><h4>Learn More</h4></button>
+        </Link>
+      </div>
     </div>
   )
 }

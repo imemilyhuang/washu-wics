@@ -9,10 +9,10 @@ const Home = () => {
   return (
     <div className="fixed-flex-column">
       <Hero />
-      <Mission />
-      <Subsections />
-      {/* <Sponsors />
-      <StayConnected /> */}
+      {/* <Mission /> */}
+      {/* <Subsections /> */}
+      <Sponsors />
+      {/* <StayConnected /> */}
     </div>
   )
 }

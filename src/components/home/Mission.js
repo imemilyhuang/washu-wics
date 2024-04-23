@@ -3,7 +3,7 @@ import "./Mission.scss"
 
 const Mission = () => {
   return (
-    <div className="mission-container comfy-padding-642">
+    <div className="flex-column-center comfy-padding-642">
       <div className='flex-column-center'>
         <h1 className='margin-bottom-1'>Our Mission</h1>
         <div
