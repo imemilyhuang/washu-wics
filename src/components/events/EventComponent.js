@@ -43,8 +43,8 @@ const EventComponent = ({data}) => {
       data.startTime.toLocaleTimeString('en-US', {hour: "numeric", minute: "numeric"})} - {
       data.endTime.toLocaleTimeString('en-US', {hour: "numeric", minute: "numeric"})}</p>
     <p className='center-text purple-text'>{data.location}</p>
-    { isHover &&
-    // { isHover && user &&
+    {/* { isHover && */}
+    { isHover && user &&
       <div className='container-row'>
         <button className='call-to-action-button marginb2'>Edit</button>
         <button
