@@ -13,18 +13,20 @@
 
 .expanded-nav-control {
     width: 100%;
-    max-width: 60rem;
-    
-    @media only screen and (max-width: 900px) {
-        max-width: 50rem;
-    }
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 1.4rem 6rem;
-    
+
+    margin: 0 6rem;
+    max-width: 60rem;
+    @media only screen and (max-width: 900px) {
+        margin: 0 4rem;
+        max-width: 50rem;
+    }
+    @media only screen and (max-width: 550px) {
+        margin: 0 2rem;
+    }
 }
 
 .hamburger-nav-control {
@@ -71,10 +73,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-}
-
-.nav-route {
-    margin-left: 3rem;
 }
 
 .footer-icon {

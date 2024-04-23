@@ -34,7 +34,7 @@ const NavBar = () => {
 
   return (
     <nav className='nav-container'>
-      <div className={width > 900 ? "expanded-nav-control" : "hamburger-nav-control"}>
+      <div className={"expanded-nav-control"}>
         <Link to="/" className='link'>
           <h3 className="bold">WashU WiCS</h3>
         </Link> 
@@ -43,19 +43,19 @@ const NavBar = () => {
           <div className='routes-holder'>
             {
               data.map(route => 
-                <Link to={"/"+route.name} className='nav-route link' key={route.name}>
+                <Link to={"/"+route.name} className='margin-left-3 link' key={route.name}>
                   <h4>{route.name}</h4>
                 </Link>
               )
             }
-            {user && <Link to="/admin" className='nav-route link'><h4>Admin</h4></Link>}
+            {user && <Link to="/admin" className='margin-left-3 link'><h4>Admin</h4></Link>}
           </div>
         }
 
         {width <= 900 && 
           <button onClick={() => setNavbarOpen(prev => !prev)} style={{backgroundColor: "transparent", borderWidth: 0, marginLeft: "3rem"}}>
             <img
-              src={process.env.PUBLIC_URL + "/assets/white-hamburger.png"}
+              src={process.env.PUBLIC_URL + "/assets/nav/white-hamburger.png"}
               style={{width: "2rem"}}
               alt="Menu"
             />
@@ -63,11 +63,27 @@ const NavBar = () => {
         }
 
         {width <= 900 && navbarOpen &&
-          <div onCLick={() => setNavbarOpen(prev => !prev)} style={{...styles.darken, height: "100%"}} />
+          <div onClick={() => setNavbarOpen(prev => !prev)} style={{...styles.darken}} />
         }
 
         {width <= 900 && navbarOpen &&
-          <div>
+          <div style={{...styles.popoutHamburger}}>
+            <button className='margin-bottom-3' onClick={() => setNavbarOpen(prev => !prev)} style={{backgroundColor: "transparent", borderWidth: 0}}>
+              <img
+                src={process.env.PUBLIC_URL + "/assets/nav/x.png"}
+                style={{width: "2rem"}}
+                alt="Menu"
+              />
+            </button>
+            {
+              data.map(route => 
+                <Link to={"/"+route.name} className='margin-bottom-1 link' key={route.name}>
+                  <h4>{route.name}</h4>
+                </Link>
+              )
+            }
+            {user && <Link to="/admin" className='margin-bottom-1 link'><h4>Admin</h4></Link>}
+            
           </div>
         }
 
@@ -87,12 +103,15 @@ let styles ={
     right: 0,
     height: "100%",
     width: "22rem",
-    padding: "4rem",
+    padding: "2rem",
     paddingTop: "2.4rem",
-    backgroundColor: "000000"
+    backgroundColor: "#fff",
+    zIndex: 6,
+    alignItems: "flex-start",
 },
 darken: {
     position: "absolute",
+    zIndex: 5,
     top: 0,
     left: 0,
     height: "100%",
