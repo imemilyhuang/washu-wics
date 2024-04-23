@@ -10,8 +10,8 @@ const Home = () => {
     <div className="fixed-flex-column">
       <Hero />
       <Mission />
-      {/* <Subsections /> */}
-      {/* <Sponsors /> */}
+      <Subsections />
+      <Sponsors />
       {/* <StayConnected /> */}
     </div>
   )

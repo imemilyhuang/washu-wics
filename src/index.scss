@@ -209,6 +209,11 @@ h1::selection {
   flex-wrap: wrap;
 }
 
+.flex-start {
+  display: flex;
+  align-items: flex-start;
+}
+
 .instagram-feed-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -263,6 +268,14 @@ h1::selection {
   margin-bottom: 2rem;
   
   @media only screen and (max-width: 700px) {
+    margin-bottom: 1rem;
+  }
+}
+
+.compact-margin-bottom-21 {
+  margin-bottom: 2rem;
+  
+  @media only screen and (max-width: 1000px) {
     margin-bottom: 1rem;
   }
 }

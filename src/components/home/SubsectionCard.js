@@ -8,13 +8,13 @@ const SubsectionCard = ({data}) => {
       <img 
         alt='Image'
         src={process.env.PUBLIC_URL+data.img}
-        className="subsection-card-img margin-bottom-42"
+        className="subsection-card-img"
       />
-      <div className="flex-column-center">
-        <h3 className="white-text center-text margin-bottom-21">{data.title}</h3>
-        <p className="white-text center-text margin-bottom-21">{data.bodyCopy}</p>
+      <div className="card-text-container">
+        <h3 className="white-text card-text compact-margin-bottom-21">{data.title}</h3>
+        <p className="white-text card-text margin-bottom-21">{data.bodyCopy}</p>
         <Link to={data.link}>
-          <button className='purple-gradient-button'><h4>Learn More</h4></button>
+          <button className="purple-gradient-button"><h4>Learn More</h4></button>
         </Link>
       </div>
     </div>
