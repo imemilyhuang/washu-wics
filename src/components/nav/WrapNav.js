@@ -7,7 +7,7 @@ const WrapNav = ({children}) => {
     <div className='nav-wrapper'>
       <NavBar/>
       {children}
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   )
 }

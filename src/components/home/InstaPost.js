@@ -19,7 +19,7 @@ const InstaPost = ({data}) => {
     return <a href={`https://www.instagram.com/p/${data?.link}/`} target="_blank" rel="noopener noreferrer">
         <div className='insta-card'>
         {/* <img crossorigin="anonymous" className='squarePic' src={data.imageLink} alt={data.name} /> */}
-        <img className="squarePic" src={image} alt={data.name} />
+            <img className="squarePic" src={image} alt={data.name} />
         </div>
     </a> 
 }

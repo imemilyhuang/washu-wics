@@ -9,18 +9,14 @@
 }
 
 .squarePic {
-    max-height: 18rem;
-    max-width: 18rem;
     object-fit: cover;
+    width: 100%;
 }
 
 .insta-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // margin-right: $space-1;
-    // margin-bottom: $space-1;
-    width: 18rem;
     align-items: center;
     background-color: $white;
     transition: 0.3s ease-out;
