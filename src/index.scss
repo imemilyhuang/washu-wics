@@ -177,6 +177,26 @@ button h4 {
   }
 }
 
+.heading-copy {
+  text-align: left;
+
+  @media only screen and (max-width: 700px) {
+      text-align: center;
+  }
+}
+
+.team-copy {
+  max-width: 26rem;
+
+  @media only screen and (max-width: 1150px) {
+    max-width: 20rem;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    max-width: 18rem;
+  }
+}
+
 .center-text {
   text-align: center;
 }
@@ -253,7 +273,7 @@ h1::selection {
   align-items: flex-start;
 }
 
-.instagram-feed-grid {
+.little-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   

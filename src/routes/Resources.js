@@ -1,4 +1,6 @@
 import React from 'react'
+import HoverClipText from "../components/home/HoverClipText"
+import colors from "../colors"
 
 const Resources = () => {
   const achievements = [
@@ -22,25 +24,28 @@ const Resources = () => {
   return (
     <div className="flex-column-center">
       <div className="flex-column-center padding-642 dark-gradient-container">
-        <div className='heading-container padding-bottom-42'>
+        <div className='heading-container'>
           <div className="title-container">
             <div className="title-text-control margin-bottom-1">
-              <p>werubwpeu</p>
+              <HoverClipText baseColor={colors.white} accentColor={colors.pink} text="Explore Resources" />
             </div>
-            <h4 className='padding-bottom-21 white-text'>Bolster. Support. Empower.</h4>
+            <p className='heading-copy padding-bottom-21 white-text'>
+            Discover a curated selection of opportunities and informational resources 
+            to fuel your passion for computer science and technology.
+            </p>
           </div>
 
           <img 
-            src={process.env.PUBLIC_URL+"/assets/home/laptop-typing.png"}
-            className='hero-image' alt="typing on a laptop"
+            src={process.env.PUBLIC_URL+"/assets/home/girl-with-laptop.png"}
+            className='hero-image' alt="girl with a laptop"
           />
           
         </div>
       </div>
 
-      <div>
+      <div className="comfy-padding-642">
         <h4>Achievements in Technology</h4>
-        <ul className='padb'>
+        <ul className="padding-21">
           {
             achievements.map(data =>
               <li><a  href={data.link} target="_blank" rel="noopener noreferrer" className='link'><span className='bold'>{data.title}</span>, {data.from}</a></li>
@@ -48,7 +53,7 @@ const Resources = () => {
           }
         </ul>
         <h4>Organizations</h4>
-        <ul className='padb'>
+        <ul className="padding-21">
           {
             organizations.map(data =>
               <li><a  href={data.link} target="_blank" rel="noopener noreferrer" className='link'><span className='bold'>{data.title}</span></a></li>
@@ -56,7 +61,7 @@ const Resources = () => {
           }
         </ul>
         <h4>Useful Links</h4>
-        <ul className='padb'>
+        <ul className="padding-21">
           {
             usefulLinks.map(data =>
               <li><a  href={data.link} target="_blank" rel="noopener noreferrer" className='link'><span className='bold'>{data.title}</span></a></li>

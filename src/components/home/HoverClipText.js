@@ -23,7 +23,7 @@ const HoverClipText = ({baseColor, accentColor, text}) => {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         style={{
-          clipPath: isHovered && `circle(50px at ${circleX}% ${circleY}%)`,
+          clipPath: isHovered && `circle(30px at ${circleX}% ${circleY}%)`,
           opacity: !isHovered && 0, zIndex: 1, color: accentColor
         }}
       >

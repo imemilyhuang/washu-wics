@@ -36,7 +36,7 @@ const StayConnected = () => {
           Follow WashU WiCS on Instagram to stay updated with the latest events, programs, and resources.
         </p>
 
-        <div className="margin-bottom-2 instagram-feed-grid">
+        <div className="margin-bottom-2 little-grid">
         {
           feed.map(data => <InstaPost data={data} key={data.link} />)
         }

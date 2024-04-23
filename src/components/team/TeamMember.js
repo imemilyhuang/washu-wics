@@ -19,9 +19,9 @@ const TeamMember = ({data}) => {
   }, [data.imagePath])
   
   return <a href={data?.link} target="_blank" rel="noopener noreferrer">
-    <div className='pad t-card'>
-      <img className='execPic marginb' src={image} alt={data.name} />
-      <h4 className='padb center-text'>{data.name}</h4>
+    <div className='padding-21 t-card'>
+      <img className='execPic margin-bottom-1' src={image} alt={data.name} />
+      <h4 className='margin-bottom-1 center-text'>{data.name}</h4>
       <p className='center-text purple-text'>{data.title}</p>
     </div>
   </a> 
