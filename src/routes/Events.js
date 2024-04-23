@@ -51,19 +51,22 @@ const Events = () => {
         </div>
       </div>
       
-      <h1 className="padding-21">Upcoming Events</h1>
-      <div className='little-grid'>
-        {
-          events.map(data => data.startTime >= new Date() ? <EventComponent data={data} key={data.id} /> : null)
-        }
-      </div>
+      <div className="comfy-padding-642">
+        <h1 className="padding-21">Upcoming Events</h1>
+        <div className='little-grid'>
+          {
+            events.map(data => data.startTime >= new Date() ? <EventComponent data={data} key={data.id} /> : null)
+          }
+        </div>
 
-      <h1 className="padding-21">Past Events</h1>
-      <div className='little-grid'>
-        {
-          events.map(data => data.startTime < new Date() ? <EventComponent data={data} key={data.id} /> : null)
-        }
+        <h1 className="padding-21">Past Events</h1>
+        <div className="little-grid">
+          {
+            events.map(data => data.startTime < new Date() ? <EventComponent data={data} key={data.id} /> : null)
+          }
+        </div>
       </div>
+      
     </div>
   )
 }

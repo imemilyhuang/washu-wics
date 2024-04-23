@@ -7,7 +7,7 @@ const EventPage = () => {
   const data = loc.state.data
 
   return (
-    <div className='full-left-container nav-pad'>
+    <div className='comfy-padding-642'>
       <button className='link' style={{alignSelf: "flex-start"}} onClick={() => navigate(-1)}><h4 className='purple-text'>Go back</h4></button>
       <h1>{data.title}</h1>
       <h2>{data.subtitle}</h2>
@@ -15,7 +15,7 @@ const EventPage = () => {
       <p>Time: {
         data.startTime.toLocaleTimeString('en-US', {hour: "numeric", minute: "numeric"})} - {
         data.endTime.toLocaleTimeString('en-US', {hour: "numeric", minute: "numeric"})}</p>
-      <p className='marginb'>Location: {data.location}</p>
+      <p className='margin-bottom-1'>Location: {data.location}</p>
       <p>{data.description}</p>
     </div>
   )

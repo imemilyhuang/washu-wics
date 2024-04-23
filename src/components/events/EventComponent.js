@@ -36,25 +36,29 @@ const EventComponent = ({data}) => {
   }
 
   return <div onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} onClick={() => navigate("/events/"+data.imagePath.split('.')[0], { state: {data: data}})} className='pad2 t-card'>
-    <img className='pic marginb' src={image} alt={data.name} />
-    <h4 className='padb center-text'>{data.title}</h4>
-    <p className='center-text purple-text'>{data.startTime.toLocaleDateString('en-US')}</p>
-    <p className='center-text purple-text'>{
-      data.startTime.toLocaleTimeString('en-US', {hour: "numeric", minute: "numeric"})} - {
-      data.endTime.toLocaleTimeString('en-US', {hour: "numeric", minute: "numeric"})}</p>
-    <p className='center-text purple-text'>{data.location}</p>
-    {/* { isHover && */}
-    { isHover && user &&
-      <div className='container-row'>
-        <button className='call-to-action-button marginb2'>Edit</button>
-        <button
-          className='call-to-action-button marginb2'
-          onClick={del}
-        >
-          Delete
-        </button>
-      </div>
-    }
+    <div className="flex-column-center padding-21">
+      <img className='pic margin-bottom-1' src={image} alt={data.name} />
+      <h4 className="margin-bottom-1 center-text">{data.title}</h4>
+      <p className='center-text purple-text'>{data.startTime.toLocaleDateString('en-US')}</p>
+      <p className='center-text purple-text'>{
+        data.startTime.toLocaleTimeString('en-US', {hour: "numeric", minute: "numeric"})} - {
+        data.endTime.toLocaleTimeString('en-US', {hour: "numeric", minute: "numeric"})}</p>
+      <p className='center-text purple-text'>{data.location}</p>
+      { isHover && user &&
+        <div className="container-row" style={{marginTop: "1rem"}}>
+          <button className='purple-gradient-button bold white-text'>Edit</button>
+          <button
+            className='purple-gradient-button bold white-text'
+            onClick={del}
+            style={{marginLeft: "1rem"}}
+          >
+            Delete
+          </button>
+        </div>
+      }
+    </div>
+    
+    
   </div>
 }
 
