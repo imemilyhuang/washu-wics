@@ -5,7 +5,7 @@ import Footer from './Footer'
 const WrapNav = ({children}) => {
   return (
     <div className='nav-wrapper'>
-      <NavBar/>
+      {/* <NavBar/> */}
       {children}
       {/* <Footer/> */}
     </div>
