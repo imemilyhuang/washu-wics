@@ -283,15 +283,39 @@ h1::selection {
 
 .little-grid {
   display: grid;
+  // grid-template-columns: repeat(6, 1fr);
   grid-template-columns: 1fr 1fr 1fr;
   
   width: 100%;
   max-width: 60rem;
   @media only screen and (max-width: 900px) {
+    // grid-template-columns: repeat(4, 1fr);
     grid-template-columns: 1fr 1fr;
     max-width: 50rem;
   }
 }
+
+// .little-grid>a {
+//   grid-column: span 2;
+// }
+
+// .little-grid>a:last-child:nth-child(3n - 1) {
+//   grid-column-end: -2;
+//   @media only screen and (max-width: 900px) {
+//     grid-column-end: 2;
+//   }
+// }
+
+// .little-grid>a:nth-last-child(2):nth-child(3n + 1) {
+//   grid-column-end: 4;
+//   @media only screen and (max-width: 900px) {
+//     grid-column-end: 2;
+//   }
+// }
+
+// .little-grid>a:last-child:nth-child(3n - 2) {
+//   grid-column-end: 5;
+// }
 
 /* margins ------------------------------------------------ */
 .margin-bottom-642 {

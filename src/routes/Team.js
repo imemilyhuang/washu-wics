@@ -58,7 +58,7 @@ const Team = () => {
       <h1 className="center-text padding-21">Current Exec Board</h1>
       <div className='little-grid'>
         {
-          teamMembers.map(data => <TeamMember data={data} key={data.id} />)
+          teamMembers.map(data => <TeamMember data={data} key={data.id} />) 
         }
       </div>
       <h2 className="padding-21">Alumni</h2>
