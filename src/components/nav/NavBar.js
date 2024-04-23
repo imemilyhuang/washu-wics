@@ -8,19 +8,19 @@ import useWindowDimensions from '../../useWindowDimensions'
 const NavBar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
-    const targetElement = document.querySelector("#root");
-    
-    useEffect(() => {
-        if (navbarOpen) {
-            disableBodyScroll(targetElement)
-        } else {
-            enableBodyScroll(targetElement)
-        }
+  const targetElement = document.querySelector("#root");
+  
+  useEffect(() => {
+    if (navbarOpen) {
+      disableBodyScroll(targetElement)
+    } else {
+      enableBodyScroll(targetElement)
+    }
 
-        return () => {
-            clearAllBodyScrollLocks()
-        }
-    }, [navbarOpen])
+    return () => {
+      clearAllBodyScrollLocks()
+    }
+  }, [navbarOpen])
   
   const data = [{name: "Resources"},{name: "Team"},{name: "Events"},{name: "Contact"}]
   const {user} = useContext(AuthContext);
@@ -39,7 +39,7 @@ const NavBar = () => {
           <h3 className="bold">WashU WiCS</h3>
         </Link> 
 
-        {width > 900 &&
+        {width > 1000 &&
           <div className='routes-holder'>
             {
               data.map(route => 
@@ -52,7 +52,7 @@ const NavBar = () => {
           </div>
         }
 
-        {width <= 900 && 
+        {width <= 1000 && 
           <button onClick={() => setNavbarOpen(prev => !prev)} style={{backgroundColor: "transparent", borderWidth: 0, marginLeft: "3rem"}}>
             <img
               src={process.env.PUBLIC_URL + "/assets/nav/white-hamburger.png"}
@@ -62,11 +62,11 @@ const NavBar = () => {
           </button>
         }
 
-        {width <= 900 && navbarOpen &&
+        {width <= 1000 && navbarOpen &&
           <div onClick={() => setNavbarOpen(prev => !prev)} style={{...styles.darken}} />
         }
 
-        {width <= 900 && navbarOpen &&
+        {width <= 1000 && navbarOpen &&
           <div style={{...styles.popoutHamburger}}>
             <button className='margin-bottom-3' onClick={() => setNavbarOpen(prev => !prev)} style={{backgroundColor: "transparent", borderWidth: 0}}>
               <img
@@ -78,11 +78,11 @@ const NavBar = () => {
             {
               data.map(route => 
                 <Link to={"/"+route.name} className='margin-bottom-1 link' key={route.name}>
-                  <h4>{route.name}</h4>
+                  <h3>{route.name}</h3>
                 </Link>
               )
             }
-            {user && <Link to="/admin" className='margin-bottom-1 link'><h4>Admin</h4></Link>}
+            {user && <Link to="/admin" className='margin-bottom-1 link'><h3>Admin</h3></Link>}
             
           </div>
         }
