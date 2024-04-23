@@ -4,6 +4,7 @@ $dark-purple: #3c3861;
 $purple: #626EEB;
 $light-purple: #9E8CFF;
 $pink: #FF71BC;
+$light-pink: #ff96ce;
 $peach: #f5dcdc;
 $orange-peach: #FF7F56;
 $white: #FFFFFF;
@@ -158,11 +159,6 @@ button h4 {
   padding: 6rem;
 }
 
-.card-flex-wrap {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .admin-container {
   padding: 6rem;
 }
@@ -206,6 +202,11 @@ h1::selection {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* margins ------------------------------------------------ */

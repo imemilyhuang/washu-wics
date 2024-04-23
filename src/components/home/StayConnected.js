@@ -18,9 +18,9 @@ const StayConnected = () => {
   }, [])
 
   return (
-    <div className='container-pink'>
-      <div className='mission-container'>
-        <h1 className='padb center-text'>Stay Connected</h1>
+    <div className="flex-column-center comfy-padding-642 pink-container">
+      <div className="flex-column-center">
+        <h1 className="margin-bottom-1 center-text">Stay Connected</h1>
         
         <div
           style={{
@@ -29,10 +29,15 @@ const StayConnected = () => {
             borderRadius:"5rem",
             backgroundColor:"black"
           }}
-          className='marginb2'
+          className="margin-bottom-2"
         >
         </div>
-        <div className='card-flex-wrap marginb2'>
+
+        <p className="center-text margin-bottom-42">
+          Follow WashU WiCS on Instagram to stay updated with the latest events, programs, and resources.
+        </p>
+
+        <div className="flex-wrap margin-bottom-2" style={{maxWidth: "60rem"}}>
         {
           feed.map(data => <InstaPost data={data} key={data.link} />)
         }

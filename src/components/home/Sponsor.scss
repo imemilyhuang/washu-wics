@@ -10,6 +10,14 @@
     height: 2rem;
     margin: 1rem;
     margin-right: 3rem;
+
+    @media only screen and (max-width: 900px) {
+        margin-right: 1rem;
+    }
+
+    @media only screen and (max-width: 550px) {
+        margin-right: 0rem;
+    }
     
     // -webkit-filter: grayscale(100%);
     // -moz-filter: grayscale(100%);
@@ -19,14 +27,6 @@
 }
 
 .hero-sponsor-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.sponsor-container {
     display: flex;
     flex-direction: row;
     align-items: center;

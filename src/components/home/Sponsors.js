@@ -28,10 +28,10 @@ const Sponsors = () => {
         >
         </div>
 
-        <p className="margin-bottom-42">
-          The companies and organizations we've worked with in past years.
+        <p className="center-text margin-bottom-42">
+          Thanks to all the companies and organizations we've partnered with in past years!
         </p>
-        <div className='sponsor-container'>
+        <div className="flex-row-center flex-wrap" style={{maxWidth: "60rem"}}>
           {
             data.map(image => 
             <a href={image.link} key={image.link}>
