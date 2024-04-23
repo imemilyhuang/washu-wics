@@ -1,17 +1,5 @@
 @import "../../index.scss";
 
-.login-form input {
-    padding: 2rem 2rem;
-    border: 0;
-    background-color: white;
-
-    box-shadow: 0 0 15px 1px rgba(0,0,0,.15);
-    border-radius: $buttonBorderRadius;
-    width: 300px;
-    font-size: 1rem;
-    font-family: "Jost", sans-serif;
-}
-
 .login-form {
     display: flex;
     flex-direction: column;
@@ -21,7 +9,7 @@
 }
 
 form input {
-    padding: 2rem 2rem;
+    padding: 1rem 1.4rem;
     border: 0;
     background-color: white;
 
