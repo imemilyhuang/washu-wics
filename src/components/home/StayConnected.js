@@ -30,14 +30,13 @@ const StayConnected = () => {
             backgroundColor:"black"
           }}
           className="margin-bottom-2"
-        >
-        </div>
+        />
 
         <p className="center-text margin-bottom-42">
           Follow WashU WiCS on Instagram to stay updated with the latest events, programs, and resources.
         </p>
 
-        <div className="flex-wrap margin-bottom-2" style={{maxWidth: "60rem"}}>
+        <div className="margin-bottom-2 grid-3-column">
         {
           feed.map(data => <InstaPost data={data} key={data.link} />)
         }

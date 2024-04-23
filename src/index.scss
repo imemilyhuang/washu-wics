@@ -209,6 +209,11 @@ h1::selection {
   flex-wrap: wrap;
 }
 
+.grid-3-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 /* margins ------------------------------------------------ */
 .margin-bottom-642 {
   margin-bottom: 6rem;

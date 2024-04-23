@@ -37,7 +37,7 @@ const NavBar = () => {
       <div className={width > 900 ? "expanded-nav-control" : "hamburger-nav-control"}>
         <Link to="/" className='link'>
           <h3 className="bold">WashU WiCS</h3>
-        </Link>
+        </Link> 
 
         {width > 900 &&
           <div className='routes-holder'>

@@ -1,6 +1,7 @@
 {
   "name": "washu-wics",
   "version": "0.1.0",
+  "homepage": "https://washuwics.github.io/",
   "private": true,
   "dependencies": {
     "@firebase/app": "^0.9.29",

@@ -5,9 +5,10 @@
     justify-content: center;
     grid-row-start: 1;
     grid-row-end: 2;
-    position: absolute;
+    // position: absolute;
     height: 6rem;
     width: 100%;
+    background-color: $dark-purple;
 }
 
 .expanded-nav-control {
@@ -27,13 +28,18 @@
 }
 
 .hamburger-nav-control {
+    width: 100%;
+    max-width: 60rem;
+    
+    @media only screen and (max-width: 900px) {
+        max-width: 50rem;
+    }
+
     display: flex;
-    flex: 1;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 1.4rem 2rem;
-    max-width: 76rem;
-    width: 100%;
+    margin: 1.4rem 6rem;
 }
 
 .nav-wrapper {
