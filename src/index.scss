@@ -131,10 +131,50 @@ button h4 {
   color: $white;
 }
 
+.heading-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 60rem;
+
+  @media only screen and (max-width: 700px) {
+      flex-direction: column;
+  } 
+}
+
 .dark-gradient-container {
   background-color: $black;
   width: 100%;
   background-image: linear-gradient(to top, $black 0%, $black 65%, $dark-purple 100%);
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  @media only screen and (max-width: 700px) {
+      align-items: center;
+  }
+}
+  
+.title-text-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  @media only screen and (max-width: 700px) {
+      flex-direction: row;
+      align-items: center;
+  }
+
+  @media only screen and (max-width: 450px) {
+      flex-direction: column;
+  }
 }
 
 .center-text {
@@ -156,7 +196,6 @@ button h4 {
   flex-direction: column;
   align-self: flex-start;
   justify-content: flex-start;
-  padding: 6rem;
 }
 
 .admin-container {

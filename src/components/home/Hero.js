@@ -8,8 +8,8 @@ const Hero = () => {
   const data = [{imagePath:"lacrm-white.png", link: "https://www.lessannoyingcrm.com/"}, {imagePath:"spectrum-white.png", link: "https://www.spectrum.com/"}]
 
   return (
-    <div className="flex-column-center padding-642 dark-gradient-container" style={{paddingTop: "8rem"}}>
-      <div className='hero-container padding-bottom-42'>
+    <div className="flex-column-center padding-642 dark-gradient-container">
+      <div className='heading-container padding-bottom-42'>
         <div className="title-container">
           <div className="title-text-control margin-bottom-1">
             <HoverClipText baseColor={colors.white} accentColor={colors.pink} text="Women in CS" />

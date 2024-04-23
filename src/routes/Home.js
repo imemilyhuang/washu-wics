@@ -12,7 +12,7 @@ const Home = () => {
       <Mission />
       <Subsections />
       <Sponsors />
-      {/* <StayConnected /> */}
+      <StayConnected />
     </div>
   )
 }

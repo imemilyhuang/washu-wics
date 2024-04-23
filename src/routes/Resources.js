@@ -20,37 +20,50 @@ const Resources = () => {
   ]
 
   return (
-    <div className='full-left-container nav-pad'>
-      <img 
-        alt='contact'
-        src={process.env.PUBLIC_URL+"/assets/home/girl-with-laptop.png"}
-        className='big-img'
-      />
-      <h1>Resources</h1>
-      <h4>Achievements in Technology</h4>
-      <ul className='padb'>
-        {
-          achievements.map(data =>
-            <li><a  href={data.link} target="_blank" rel="noopener noreferrer" className='link'><span className='bold'>{data.title}</span>, {data.from}</a></li>
-          )
-        }
-      </ul>
-      <h4>Organizations</h4>
-      <ul className='padb'>
-        {
-          organizations.map(data =>
-            <li><a  href={data.link} target="_blank" rel="noopener noreferrer" className='link'><span className='bold'>{data.title}</span></a></li>
-          )
-        }
-      </ul>
-      <h4>Useful Links</h4>
-      <ul className='padb'>
-        {
-          usefulLinks.map(data =>
-            <li><a  href={data.link} target="_blank" rel="noopener noreferrer" className='link'><span className='bold'>{data.title}</span></a></li>
-          )
-        }
-      </ul>
+    <div className="flex-column-center">
+      <div className="flex-column-center padding-642 dark-gradient-container">
+        <div className='heading-container padding-bottom-42'>
+          <div className="title-container">
+            <div className="title-text-control margin-bottom-1">
+              <p>werubwpeu</p>
+            </div>
+            <h4 className='padding-bottom-21 white-text'>Bolster. Support. Empower.</h4>
+          </div>
+
+          <img 
+            src={process.env.PUBLIC_URL+"/assets/home/laptop-typing.png"}
+            className='hero-image' alt="typing on a laptop"
+          />
+          
+        </div>
+      </div>
+
+      <div>
+        <h4>Achievements in Technology</h4>
+        <ul className='padb'>
+          {
+            achievements.map(data =>
+              <li><a  href={data.link} target="_blank" rel="noopener noreferrer" className='link'><span className='bold'>{data.title}</span>, {data.from}</a></li>
+            )
+          }
+        </ul>
+        <h4>Organizations</h4>
+        <ul className='padb'>
+          {
+            organizations.map(data =>
+              <li><a  href={data.link} target="_blank" rel="noopener noreferrer" className='link'><span className='bold'>{data.title}</span></a></li>
+            )
+          }
+        </ul>
+        <h4>Useful Links</h4>
+        <ul className='padb'>
+          {
+            usefulLinks.map(data =>
+              <li><a  href={data.link} target="_blank" rel="noopener noreferrer" className='link'><span className='bold'>{data.title}</span></a></li>
+            )
+          }
+        </ul>
+      </div>
     </div>
   )
 }
