@@ -32,7 +32,6 @@ const Footer = () => {
         <p className='white-text'>Copyright © 2024 Women in Computer Science at Washington University in St. Louis.</p>
       </div>
       <div>
-        <p className='white-text padb'>Other Pages</p>
         <div>
           {
             pageLinks1.map(data => <Link key={data.link} to={data.link} className='link'><p className='bold white-text'>{data.text}</p></Link>)
@@ -40,7 +39,6 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <p className='padb'>Other pages</p>
         <div>
           {
             pageLinks2.map(data => <Link key={data.link} to={data.link} className='link'><p className='bold white-text'>{data.text}</p></Link>)
