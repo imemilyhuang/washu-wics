@@ -55,14 +55,14 @@ const Team = () => {
         </div>
       </div>
       
-      <h1 className="padding-21">Current Executive Board</h1>
-      <div className='card-flex-wrap'>
+      <h1 className="center-text padding-21">Current Exec Board</h1>
+      <div className='little-grid'>
         {
           teamMembers.map(data => <TeamMember data={data} key={data.id} />)
         }
       </div>
       <h2 className="padding-21">Alumni</h2>
-      <div className='card-flex-wrap'>
+      <div className='little-grid'>
         {
           alumni.map(data => <TeamMember data={data} key={data.id} />)
         }
