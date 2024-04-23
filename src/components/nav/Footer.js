@@ -18,7 +18,7 @@ const Footer = () => {
   const pageLinks2 = [
     {link: "/resources", text: "Resources"},
     {link: "/team", text: "Team"},
-    {link: "/events", text: "Events"},
+    {link: "/events", text: "Events"}
   ]
   return (
     <div className='foot-container'>

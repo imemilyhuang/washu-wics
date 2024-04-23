@@ -217,10 +217,12 @@ h1::selection {
 .instagram-feed-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  
   width: 100%;
-
+  max-width: 60rem;
   @media only screen and (max-width: 900px) {
     grid-template-columns: 1fr 1fr;
+    max-width: 50rem;
   }
 }
 
