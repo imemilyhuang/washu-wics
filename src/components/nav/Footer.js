@@ -23,7 +23,7 @@ const Footer = () => {
   return (
     <div className='foot-container'>
       <div>
-        <h2 className='padb white-text'>washu wics</h2>
+        <h2 className='padb white-text'>WashU WiCS</h2>
         <div className='container-row padb'>
           {
             footerIconData.map(data => <FooterIcon data={data} key={data.imagePath} />)
@@ -32,7 +32,7 @@ const Footer = () => {
         <p className='white-text'>Copyright © 2024 Women in Computer Science at Washington University in St. Louis.</p>
       </div>
       <div>
-        <p className='white-text padb'>Other pages</p>
+        <p className='white-text padb'>Other Pages</p>
         <div>
           {
             pageLinks1.map(data => <Link key={data.link} to={data.link} className='link'><p className='bold white-text'>{data.text}</p></Link>)

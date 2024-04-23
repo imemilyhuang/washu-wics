@@ -3,16 +3,19 @@
 .mission-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: $section-76-width;
-    padding: 4rem;
-    @media only screen and (max-width: 1600px) {
-        width: $section-66-width;
+    width: 100%;
+}
+
+.mission-text-control {
+    max-width: 45rem;
+
+    @media only screen and (max-width: 900px) {
+        max-width: 40rem;
     }
-    @media only screen and (max-width: 1250px) {
-        width: $section-50-width;
-    }
-    @media only screen and (max-width: 1000px) {
-        width: 100%;
-    }
+}
+
+.mission-img {
+    height: 16rem;
 }

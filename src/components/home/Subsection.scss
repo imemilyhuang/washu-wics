@@ -1,9 +1,5 @@
 @import '../../index';
 
-.subsection-card-img {
-    height: 16rem;
-}
-
 .card {
     padding: 4rem;
     border-radius: $buttonBorderRadius;
@@ -36,14 +32,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: $section-76-width;
+    width: 76rem;
 
     @media only screen and (max-width: 1600px) {
-        width: $section-66-width;
+        width: 66rem;
     }
     @media only screen and (max-width: 1250px) {
-        width: $section-50-width;
+        width: 50rem;
     }
+}
+
+.subsection-card-img {
+    height: 16rem;
 }
 
 .items-container {

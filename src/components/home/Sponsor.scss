@@ -1,8 +1,14 @@
 @import "../../index.scss";
 
+.hero-sponsor-img {
+    height: 2rem;
+    margin: 1rem;
+    margin-bottom: 0rem;
+}
+
 .sponsor-img {
     height: 2rem;
-    margin: 1.5rem;
+    margin: 1rem;
     margin-right: 3rem;
     
     // -webkit-filter: grayscale(100%);
@@ -12,15 +18,18 @@
     // filter: grayscale(100%); 
 }
 
-.logo-container {
+.hero-sponsor-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    // justify-content: flex-start;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.justify-flex-start {
-    justify-content: flex-start;
+.sponsor-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }

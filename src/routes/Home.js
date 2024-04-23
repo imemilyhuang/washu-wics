@@ -7,12 +7,12 @@ import StayConnected from "../components/home/StayConnected"
 
 const Home = () => {
   return (
-    <div className='container-align-center'>
+    <div className="fixed-flex-column">
       <Hero />
       <Mission />
       <Subsections />
-      <Sponsors />
-      <StayConnected />
+      {/* <Sponsors />
+      <StayConnected /> */}
     </div>
   )
 }

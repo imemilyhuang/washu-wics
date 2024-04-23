@@ -21,12 +21,12 @@ const Resources = () => {
 
   return (
     <div className='full-left-container nav-pad'>
-      <h1>Resources</h1>
       <img 
         alt='contact'
         src={process.env.PUBLIC_URL+"/assets/home/girl-with-laptop.png"}
         className='big-img'
       />
+      <h1>Resources</h1>
       <h4>Achievements in Technology</h4>
       <ul className='padb'>
         {

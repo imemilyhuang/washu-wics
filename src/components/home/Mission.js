@@ -3,31 +3,31 @@ import "./Mission.scss"
 
 const Mission = () => {
   return (
-    <div className='container-white'>
-      <div className='mission-container'>
-        <h1 className='padb'>Our mission</h1>
+    <div className="mission-container comfy-padding-642">
+      <div className='flex-column-center'>
+        <h1 className='margin-bottom-1'>Our Mission</h1>
         <div
           style={{
             width: "6rem",
             height: "0.25rem",
             borderRadius:"5rem",
-            backgroundColor:"black"
+            backgroundColor:"black",
           }}
-          className='marginb2'
+          className="margin-bottom-2"
         >
         </div>
 
-        <p className='center-text padb4'>
-          Our mission is to <span className='bold'>create</span> a welcoming and supportive 
-          community for women in computing, <span className='bold'>bolster</span> professional
+        <p className="mission-text-control center-text padding-bottom-42">
+          Our mission is to <span className="bold pink-text">create</span> a welcoming and supportive 
+          community for women in computing, <span className="bold pink-text">bolster</span> professional
           development by providing networking and mentorship opportunities,
-          and <span className='bold'>inspire</span> future generations of women by giving 
+          and <span className="bold pink-text">inspire</span> future generations of women by giving 
           back to the greater St. Louis community.
         </p>
         <img 
           alt='subsection'
           src={process.env.PUBLIC_URL+"/assets/home/girl-with-laptop.png"}
-          className='subsection-card-img'
+          className="mission-img"
         />
       </div>
     </div>

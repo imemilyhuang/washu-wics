@@ -32,7 +32,7 @@ const Sponsors = () => {
           A collection of the companies and organizations we've worked with in 
           past years
         </p>
-        <div className='logo-container'>
+        <div className='sponsor-container'>
           {
             data.map(image => 
             <a href={image.link} key={image.link}>

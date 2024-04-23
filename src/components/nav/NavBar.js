@@ -26,7 +26,7 @@ const NavBar = () => {
   const {user} = useContext(AuthContext);
   const { height, width } = useWindowDimensions()
 
-  if (width > 1100) {
+  if (width > 900) {
     document.body.style.overflowY = "scroll"
   } else if (navbarOpen) {
     document.body.style.overflowY = "hidden"
@@ -34,12 +34,12 @@ const NavBar = () => {
 
   return (
     <nav className='nav-container'>
-      <div className={width > 1000 ? "expanded-nav-control" : "hamburger-nav-control"}>
+      <div className={width > 900 ? "expanded-nav-control" : "hamburger-nav-control"}>
         <Link to="/" className='link'>
-          <h3>WashU WiCS</h3>
+          <h3 className="bold">WashU WiCS</h3>
         </Link>
 
-        {width > 1100 &&
+        {width > 900 &&
           <div className='routes-holder'>
             {
               data.map(route => 
@@ -52,7 +52,7 @@ const NavBar = () => {
           </div>
         }
 
-        {width <= 1100 && 
+        {width <= 900 && 
           <button onClick={() => setNavbarOpen(prev => !prev)} style={{backgroundColor: "transparent", borderWidth: 0, marginLeft: "3rem"}}>
             <img
               src={process.env.PUBLIC_URL + "/assets/white-hamburger.png"}
@@ -62,11 +62,11 @@ const NavBar = () => {
           </button>
         }
 
-        {width <= 1100 && navbarOpen &&
+        {width <= 900 && navbarOpen &&
           <div onCLick={() => setNavbarOpen(prev => !prev)} style={{...styles.darken, height: "100%"}} />
         }
 
-        {width <= 1100 && navbarOpen &&
+        {width <= 900 && navbarOpen &&
           <div>
           </div>
         }
