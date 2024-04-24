@@ -55,52 +55,63 @@ const EventEdit = () => {
 
   return (
     <form name="eventForm">
-      <h4>Create a new event</h4>
+      <h4>Create a New Event</h4>
       <input
         type='text' name='title'
         placeholder='Title'
         value={formData.title}
         onChange={handleChange}
+        className="input"
       />
       <input
         type='text' name='subtitle'
         placeholder='Subtitle'
         value={formData.subtitle}
         onChange={handleChange}
+        className="input"
       />
       <input
         type='text' name='description'
         placeholder='Description'
         value={formData.description}
         onChange={handleChange}
+        className="input"
       />
       <input
         type='text' name='location'
         placeholder='Location'
         value={formData.location}
         onChange={handleChange}
+        className="input"
       />
       <input
         type='text' name='host'
         placeholder='Host'
         value={formData.host}
         onChange={handleChange}
+        className="input"
       />
       <input
         type='file' name='image' onChange={handleFileUpload}
+        className="input"
       />
       <input
         type='date' name='date'
         placeholder='Date'
         value={formData.date}
         onChange={handleChange}
+        className="input margin-bottom-42"
       />
 
-      <p>Start Time</p>
-      <TimePicker formData={formData} setFormData={setFormData} name={"startTime"} />
-      <p>End Time</p>
-      <TimePicker formData={formData} setFormData={setFormData} name={"endTime"} />
-      <button type='button' onClick={handleSubmit} className='purple-gradient-button' style={{width: "12rem"}}><p>Create</p></button>
+      <p className="margin-bottom-1">Start Time</p>
+      <div className="margin-bottom-21">
+        <TimePicker formData={formData} setFormData={setFormData} name={"startTime"} />
+      </div>
+      <p className="margin-bottom-1">End Time</p>
+      <div className="margin-bottom-21">
+        <TimePicker formData={formData} setFormData={setFormData} name={"endTime"} />
+      </div>
+      <button type='button' onClick={handleSubmit} className='purple-gradient-button' style={{width: "12rem"}}><h4>Create</h4></button>
     </form>
   )
 }
