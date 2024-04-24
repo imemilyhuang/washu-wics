@@ -1,3 +1,3 @@
-# Repository for new WashU WiCS Website
+# Repository for new WashU WiCS website
 
 Official link: https://www.wics.wustl.edu/
