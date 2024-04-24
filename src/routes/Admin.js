@@ -11,16 +11,16 @@ const Admin = () => {
   }
 
   return (
-    <div className='full-left-container nav-pad'>
+    <div className='comfy-padding-642'>
       <h1 className='marginb'>Admin</h1>
-      <h3>Manage events</h3>
+      <h3>Manage Events</h3>
       <ManageEvents />
-      <div className='marginb2'/>
+      <div className='margin-bottom-2'/>
 
-      <h3>Manage team members</h3>
+      <h3>Manage Team</h3>
       <ManageTeamMember />
-      <div className='marginb2'/>
-      <button className='purple-gradient-button' style={{width: "12rem"}} onClick={logout}><p>Log out</p></button>
+      <div className='margin-bottom-2'/>
+      <button className='purple-gradient-button' style={{width: "12rem"}} onClick={logout}><p>Log Out</p></button>
     </div>
   )
 }
