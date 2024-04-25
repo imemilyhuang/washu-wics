@@ -17,16 +17,7 @@ const Sponsors = () => {
     <div className="flex-column-center comfy-padding-642">
       <div className="flex-column-center">
         <h1 className="margin-bottom-1">Past Sponsors</h1>
-        <div
-          style={{
-            width: "6rem",
-            height: "0.25rem",
-            borderRadius:"5rem",
-            backgroundColor:"black"
-          }}
-          className="margin-bottom-21"
-        >
-        </div>
+        <div className="margin-bottom-2 little-line" />
 
         <p className="center-text margin-bottom-42">
           Thanks to all the companies and organizations we've partnered with in past years!

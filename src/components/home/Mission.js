@@ -6,16 +6,7 @@ const Mission = () => {
     <div className="flex-column-center comfy-padding-642">
       <div className='flex-column-center'>
         <h1 className='margin-bottom-1'>Our Mission</h1>
-        <div
-          style={{
-            width: "6rem",
-            height: "0.25rem",
-            borderRadius:"5rem",
-            backgroundColor:"black",
-          }}
-          className="margin-bottom-2"
-        >
-        </div>
+        <div className="margin-bottom-2 little-line" />
 
         <p className="mission-text-control center-text padding-bottom-42">
           Our mission is to <span className="bold pink-text">create</span> a welcoming and supportive 

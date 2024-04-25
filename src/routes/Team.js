@@ -4,6 +4,7 @@ import HoverClipText from "../components/home/HoverClipText"
 import colors from "../colors"
 import { db } from '../firebase'
 import TeamMember from '../components/team/TeamMember'
+import useWindowDimensions from '../useWindowDimensions'
 
 const Team = () => {
   const [teamMembers, setTeamMembers] = useState([])
@@ -31,7 +32,7 @@ const Team = () => {
     }
   }, [])
 
-  console.log(teamMembers)
+  const { width } = useWindowDimensions()
 
   return (
     <div className="flex-column-center">
@@ -46,27 +47,27 @@ const Team = () => {
               support the growing community of women in technology at WashU.
             </p>
           </div>
-
           <img 
             src={process.env.PUBLIC_URL+"/assets/home/group.png"}
             className='hero-image' alt="group of women"
           />
-          
         </div>
       </div>
 
-      <div className="comfy-padding-642">
-        <h1 className="padding-21">Current Exec Board</h1>
-        <div className='little-grid'>
-          {
-            teamMembers.map(data => <TeamMember data={data} key={data.id} />)
-          }
-        </div>
-        <h2 className="padding-21">Alumni</h2>
-        <div className='little-grid'>
-          {
-            alumni.map(data => <TeamMember data={data} key={data.id} />)
-          }
+      <div className={`comfy-padding-642 ${width > 1100 ? 'flex-column-center' : 'flex-column'}`} style={{width: "100%"}}>
+        <div>
+          <h1 className="padding-21">Current Exec Board</h1>
+          <div className='little-grid'>
+            {
+              teamMembers.map(data => <TeamMember data={data} key={data.id} />)
+            }
+          </div>
+          <h2 className="padding-21">Alumni</h2>
+          <div className='little-grid'>
+            {
+              alumni.map(data => <TeamMember data={data} key={data.id} />)
+            }
+          </div>
         </div>
       </div>
     </div>

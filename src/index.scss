@@ -102,7 +102,7 @@ h5 {
 
 p {
   font-size: 1rem;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 700px) {
     font-size: 0.875rem;
   }
 }
@@ -110,7 +110,7 @@ p {
 li {
   font-size: 1rem;
   margin-left: 2rem;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 700px) {
     font-size: 0.875rem;
   }
 }
@@ -298,41 +298,39 @@ h1::selection {
   align-items: flex-start;
 }
 
-.little-grid {
+.little-line {
+  width: 6rem;
+  height: 0.25rem;
+  border-radius: 5rem;
+  background-color: #000000;
+}
+
+.insta-grid {
   display: grid;
-  // grid-template-columns: repeat(6, 1fr);
   grid-template-columns: 1fr 1fr 1fr;
   
   width: 100%;
   max-width: 60rem;
   @media only screen and (max-width: 1100px) {
-    // grid-template-columns: repeat(4, 1fr);
     grid-template-columns: 1fr 1fr;
     max-width: 50rem;
   }
 }
-
-// .little-grid>a {
-//   grid-column: span 2;
-// }
-
-// .little-grid>a:last-child:nth-child(3n - 1) {
-//   grid-column-end: -2;
-//   @media only screen and (max-width: 900px) {
-//     grid-column-end: 2;
-//   }
-// }
-
-// .little-grid>a:nth-last-child(2):nth-child(3n + 1) {
-//   grid-column-end: 4;
-//   @media only screen and (max-width: 900px) {
-//     grid-column-end: 2;
-//   }
-// }
-
-// .little-grid>a:last-child:nth-child(3n - 2) {
-//   grid-column-end: 5;
-// }
+.little-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+  width: 100%;
+  max-width: 60rem;
+  @media only screen and (max-width: 1100px) {
+    grid-template-columns: 1fr 1fr;
+    max-width: 50rem;
+  }
+  @media only screen and (max-width: 700px) {
+    grid-template-columns: 1fr;
+    max-width: 50rem;
+  }
+}
 
 /* margins ------------------------------------------------ */
 .margin-bottom-642 {
@@ -389,6 +387,13 @@ h1::selection {
   @media only screen and (max-width: 1000px) {
     margin-bottom: 1rem;
   }
+}
+
+.margin-left-2 {
+  margin-left: 2rem;
+}
+.margin-left-1 {
+  margin-left: 1rem;
 }
 
 .margin-bottom-3 {

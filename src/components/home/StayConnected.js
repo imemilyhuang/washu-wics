@@ -1,4 +1,4 @@
-import { collection, doc, onSnapshot, orderBy, query } from '@firebase/firestore'
+import { collection, onSnapshot, query } from '@firebase/firestore'
 import React, { useEffect, useState } from 'react'
 import { db } from '../../firebase'
 
@@ -22,21 +22,13 @@ const StayConnected = () => {
       <div className="flex-column-center">
         <h1 className="margin-bottom-1 center-text">Stay Connected</h1>
         
-        <div
-          style={{
-            width: "6rem", 
-            height: "0.25rem",
-            borderRadius:"5rem",
-            backgroundColor:"black"
-          }}
-          className="margin-bottom-2"
-        />
+        <div className="margin-bottom-2 little-line" />
 
         <p className="center-text margin-bottom-42">
           Follow WashU WiCS on Instagram to stay updated with the latest events, programs, and resources.
         </p>
 
-        <div className="margin-bottom-2 little-grid">
+        <div className="margin-bottom-2 insta-grid">
         {
           feed.map(data => <InstaPost data={data} key={data.link} />)
         }

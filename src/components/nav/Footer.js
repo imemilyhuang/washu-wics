@@ -13,8 +13,9 @@ const Footer = () => {
 
   const pageLinks1 = [
     {link: "/home", text: "Home"},
+    {link: "/contact", text: "Contact"},
     {link: "/login", text: "Login"},
-    {link: "/contact", text: "Contact"}]
+  ]
   const pageLinks2 = [
     {link: "/resources", text: "Resources"},
     {link: "/team", text: "Team"},
@@ -23,25 +24,27 @@ const Footer = () => {
   return (
     <div className='foot-container'>
       <footer>
-        <div style={{marginRight: "2rem"}}>
-          <h2 className='margin-bottom-2 white-text'>WashU WiCS</h2>
-          <div className='container-row margin-bottom-1'>
+        <div className='footer-inside-container'>
+          <div style={{marginRight: "2rem"}}>
+            <h2 className='margin-bottom-2 white-text'>WashU WiCS</h2>
+            <div className='container-row margin-bottom-1'>
+              {
+                footerIconData.map(data => <FooterIcon data={data} key={data.imagePath} />)
+              }
+            </div>
+          </div>
+          <div style={{marginRight: "2rem"}}>
             {
-              footerIconData.map(data => <FooterIcon data={data} key={data.imagePath} />)
+              pageLinks1.map(data => <Link key={data.link} to={data.link} className='link'><p className='bold white-text'>{data.text}</p></Link>)
             }
           </div>
-          <p className='white-text margin-bottom-1'>Copyright © 2024 Women in Computer Science at Washington University in St. Louis.</p>
+          <div>
+            {
+              pageLinks2.map(data => <Link key={data.link} to={data.link} className='link'><p className='bold white-text'>{data.text}</p></Link>)
+            }
+          </div>
         </div>
-        <div style={{marginRight: "2rem"}}>
-          {
-            pageLinks1.map(data => <Link key={data.link} to={data.link} className='link'><p className='bold white-text'>{data.text}</p></Link>)
-          }
-        </div>
-        <div>
-          {
-            pageLinks2.map(data => <Link key={data.link} to={data.link} className='link'><p className='bold white-text'>{data.text}</p></Link>)
-          }
-        </div>
+        <p className='white-text margin-bottom-1'>Copyright © 2024 Women in Computer Science at Washington University in St. Louis.</p>
       </footer>
     </div>
   )

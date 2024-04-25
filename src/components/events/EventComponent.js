@@ -6,6 +6,7 @@ import "../team/TeamMember.scss"
 import { useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../context/AuthContext'
 import { doc, deleteDoc } from 'firebase/firestore'
+import useWindowDimensions from '../../useWindowDimensions'
 
 const EventComponent = ({data}) => {
   const [image, setImage] = useState(process.env.PUBLIC_URL+"/assets/default-pfp.png")
@@ -35,15 +36,19 @@ const EventComponent = ({data}) => {
     }
   }
 
-  return <div onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} onClick={() => navigate("/events/"+data.imagePath.split('.')[0], { state: {data: data}})} className='pad2 t-card'>
-    <div className="flex-column-center padding-21">
-      <img className='pic margin-bottom-1' src={image} alt={data.name} />
-      <h4 className="margin-bottom-1 center-text">{data.title}</h4>
-      <p className='center-text purple-text'>{data.startTime.toLocaleDateString('en-US')}</p>
-      <p className='center-text purple-text'>{
+  const { width } = useWindowDimensions()
+
+  return <div onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} 
+    onClick={() => navigate("/events/"+data.imagePath.split('.')[0], { state: {data: data}})} 
+    className='pad2 t-card padding-21'>
+    <img className={`pic ${width > 700 && 'margin-bottom-1'}`} src={image} alt={data.name} />
+    <div className={`${width <= 700 && 'margin-left-1'}`}>
+      <h4 className={`margin-bottom-1 ${width > 700 && 'center-text'}`}>{data.title}</h4>
+      <p className={`purple-text ${width > 700 && 'center-text'}`}>{data.startTime.toLocaleDateString('en-US')}</p>
+      <p className={`purple-text ${width > 700 && 'center-text'}`}>{
         data.startTime.toLocaleTimeString('en-US', {hour: "numeric", minute: "numeric"})} - {
         data.endTime.toLocaleTimeString('en-US', {hour: "numeric", minute: "numeric"})}</p>
-      <p className='center-text purple-text'>{data.location}</p>
+      <p className={`purple-text ${width > 700 && 'center-text'}`}>{data.location}</p>
       { isHover && user &&
         <div className="container-row" style={{marginTop: "1rem"}}>
           <button className='purple-gradient-button bold white-text'>Edit</button>
@@ -57,8 +62,6 @@ const EventComponent = ({data}) => {
         </div>
       }
     </div>
-    
-    
   </div>
 }
 

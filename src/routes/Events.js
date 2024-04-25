@@ -27,8 +27,6 @@ const Events = () => {
     }
   }, [])
 
-  console.log(events)
-
   return (
     <div className="flex-column-center">
       <div className="flex-column-center padding-642 dark-gradient-container">

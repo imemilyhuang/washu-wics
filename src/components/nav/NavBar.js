@@ -20,11 +20,11 @@ const NavBar = () => {
     return () => {
       clearAllBodyScrollLocks()
     }
-  }, [navbarOpen])
+  }, [navbarOpen, targetElement])
   
   const data = [{name: "Resources"},{name: "Team"},{name: "Events"},{name: "Contact"}]
   const {user} = useContext(AuthContext);
-  const { height, width } = useWindowDimensions()
+  const { width } = useWindowDimensions()
 
   if (width > 900) {
     document.body.style.overflowY = "scroll"
@@ -43,7 +43,7 @@ const NavBar = () => {
           <div className='routes-holder'>
             {
               data.map(route => 
-                <Link to={"/"+route.name} className='margin-left-3 link' key={route.name}>
+                <Link to={"/"+route.name.toLowerCase()} className='margin-left-3 link' key={route.name}>
                   <h4>{route.name}</h4>
                 </Link>
               )
@@ -77,12 +77,12 @@ const NavBar = () => {
             </button>
             {
               data.map(route => 
-                <Link to={"/"+route.name} className='margin-bottom-1 link' key={route.name}>
+                <Link onClick={() => setNavbarOpen(false)} to={"/"+route.name.toLowerCase()} className='margin-bottom-1 link' key={route.name}>
                   <h3>{route.name}</h3>
                 </Link>
               )
             }
-            {user && <Link to="/admin" className='margin-bottom-1 link'><h3>Admin</h3></Link>}
+            {user && <Link onClick={() => setNavbarOpen(false)} to="/admin" className='margin-bottom-1 link'><h3>Admin</h3></Link>}
             
           </div>
         }

@@ -48,7 +48,7 @@ const Resources = () => {
         <ul className="padding-21">
           {
             achievements.map(data =>
-              <li><a  href={data.link} target="_blank" rel="noopener noreferrer" className='link'><span className='bold'>{data.title}</span>, {data.from}</a></li>
+              <li key={data.link}><a href={data.link} target="_blank" rel="noopener noreferrer" className='link'><span className='bold'>{data.title}</span>, {data.from}</a></li>
             )
           }
         </ul>
@@ -56,7 +56,7 @@ const Resources = () => {
         <ul className="padding-21">
           {
             organizations.map(data =>
-              <li><a  href={data.link} target="_blank" rel="noopener noreferrer" className='link'><span className='bold'>{data.title}</span></a></li>
+              <li key={data.link}><a href={data.link} target="_blank" rel="noopener noreferrer" className='link'><span className='bold'>{data.title}</span></a></li>
             )
           }
         </ul>
@@ -64,7 +64,7 @@ const Resources = () => {
         <ul className="padding-21">
           {
             usefulLinks.map(data =>
-              <li><a  href={data.link} target="_blank" rel="noopener noreferrer" className='link'><span className='bold'>{data.title}</span></a></li>
+              <li key={data.link}><a href={data.link} target="_blank" rel="noopener noreferrer" className='link'><span className='bold'>{data.title}</span></a></li>
             )
           }
         </ul>
