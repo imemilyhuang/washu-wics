@@ -6,7 +6,7 @@ const SubsectionCard = ({data}) => {
   return (
     <div className="card padding-2">
       <img 
-        alt='Image'
+        alt={data.title}
         src={process.env.PUBLIC_URL+data.img}
         className="subsection-card-img"
       />
