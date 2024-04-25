@@ -35,7 +35,7 @@ const Hero = () => {
         <h4 className="pink-text">— This Year's Sponsors —</h4>
         <div className='hero-sponsor-container'>
           { data.map(image => 
-          <a href={image.link} key={image.link}>
+          <a href={image.link} key={image.link} target="_blank" rel="noopener noreferrer">
             <img
               alt='sponsor'
               src={process.env.PUBLIC_URL+"/assets/sponsors/"+image.imagePath}

@@ -25,7 +25,7 @@ const Sponsors = () => {
         <div className="flex-row-center flex-wrap" style={{maxWidth: "60rem"}}>
           {
             data.map(image => 
-            <a href={image.link} key={image.link}>
+            <a href={image.link} key={image.link} target="_blank" rel="noopener noreferrer">
               <img 
                 alt='sponsor'
                 src={process.env.PUBLIC_URL+"/assets/sponsors/"+image.imagePath}
