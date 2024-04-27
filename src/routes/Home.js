@@ -6,6 +6,10 @@ import Sponsors from "../components/home/Sponsors"
 import StayConnected from "../components/home/StayConnected"
 
 const Home = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   return (
     <div className="fixed-flex-column">
       <Hero />

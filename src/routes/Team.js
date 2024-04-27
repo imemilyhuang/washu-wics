@@ -7,6 +7,10 @@ import TeamMember from '../components/team/TeamMember'
 import useWindowDimensions from '../useWindowDimensions'
 
 const Team = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   const [teamMembers, setTeamMembers] = useState([])
   const [alumni, setAlumni] = useState([])
 

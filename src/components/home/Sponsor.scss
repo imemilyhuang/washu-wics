@@ -9,21 +9,18 @@
 .sponsor-img {
     height: 2rem;
     margin: 1rem;
-    margin-right: 3rem;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
 
     @media only screen and (max-width: 900px) {
-        margin-right: 1rem;
-    }
-
-    @media only screen and (max-width: 550px) {
-        margin-right: 0rem;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
     }
     
-    // -webkit-filter: grayscale(100%);
-    // -moz-filter: grayscale(100%);
-    // -o-filter: grayscale(100%);
-    // -ms-filter: grayscale(100%);
-    // filter: grayscale(100%); 
+    @media only screen and (max-width: 550px) {
+        margin-right: 0.25rem;
+        margin-left: 0.25rem;
+    }
 }
 
 .hero-sponsor-container {

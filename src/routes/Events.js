@@ -6,6 +6,10 @@ import { db } from '../firebase'
 import EventComponent from '../components/events/EventComponent'
 
 const Events = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   const [events, setEvents] = useState([])
 
   useEffect(() => {
