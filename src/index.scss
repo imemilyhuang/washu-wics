@@ -157,7 +157,7 @@ button h4 {
   max-width: 60rem;
 
   @media only screen and (max-width: 700px) {
-      flex-direction: column;
+    flex-direction: column;
   } 
 }
 
@@ -174,7 +174,7 @@ button h4 {
   align-items: flex-start;
 
   @media only screen and (max-width: 700px) {
-      align-items: center;
+    align-items: center;
   }
 }
   
@@ -256,6 +256,15 @@ button h4 {
 
 h1::selection {
   background: $light-purple;
+}
+
+.max-width-container {
+  width: 100%;
+  max-width: 60rem;
+
+  @media only screen and (max-width: 900px) {
+    max-width: 50rem;
+  }
 }
 
 /* alignment ------------------------------------------------ */
@@ -470,6 +479,13 @@ h1::selection {
 
   @media only screen and (max-width: 700px) {
     padding: 1rem;
+  }
+}
+.padding-21-horizontal {
+  padding: 0 2rem;
+
+  @media only screen and (max-width: 700px) {
+    padding: 0 1rem;
   }
 }
 

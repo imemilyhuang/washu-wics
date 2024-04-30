@@ -10,20 +10,28 @@ const Events = () => {
     window.scrollTo(0, 0)
   }, [])
   
-  const [events, setEvents] = useState([])
+  const [pastEvents, setPastEvents] = useState([])
+  const [upcomingEvents, setUpcomingEvents] = useState([])
 
   useEffect(() => {
     const q = query(collection(db, "events"), orderBy("startTime", "desc"))
     const unsubscribe = onSnapshot(q, res => {
-      let newDocs = []
+      let upcoming = []
+      let past = []
       res.docs.forEach(doc => {
-        newDocs.push({...doc.data(), id: doc.id,
+        const newDoc = {...doc.data(), id: doc.id,
           startTime: new Date(1000*doc.data().startTime.seconds),
           endTime: new Date(1000*doc.data().endTime.seconds),
-        })
+        }
+        if (newDoc.startTime >= new Date()) {
+          upcoming.push(newDoc)
+        } else {
+          past.push(newDoc)
+        }
       })
 
-      setEvents(newDocs)
+      setPastEvents(past)
+      setUpcomingEvents(upcoming)
     })
     
     return () => {
@@ -55,18 +63,22 @@ const Events = () => {
       
       <div className="comfy-padding-642">
         <h1 className="padding-21">Upcoming Events</h1>
-        <div className='little-grid'>
-          {
-            events.map(data => data.startTime >= new Date() ? <EventComponent data={data} key={data.id} /> : null)
-          }
-        </div>
+        {
+          upcomingEvents.length > 0 ?
+          <div className='little-grid'>
+            {upcomingEvents.map(data => <EventComponent data={data} key={data.id} />)}
+          </div> :
+          <p className='padding-21-horizontal'>It looks like there are no upcoming events planned, but be on the lookout!</p>
+        }
 
         <h1 className="padding-21">Past Events</h1>
-        <div className="little-grid">
-          {
-            events.map(data => data.startTime < new Date() ? <EventComponent data={data} key={data.id} /> : null)
-          }
-        </div>
+        {
+          pastEvents.length > 0 ?
+          <div className='little-grid'>
+            {pastEvents.map(data => <EventComponent data={data} key={data.id} />)}
+          </div> :
+          <p className='padding-21-horizontal'>It looks like there are no past events.</p>
+        }
       </div>
       
     </div>
