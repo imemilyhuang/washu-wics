@@ -49,7 +49,7 @@ const Resources = () => {
 
       <div className="comfy-padding-642">
         <h4>Achievements in Technology</h4>
-        <ul className="padding-21">
+        <ul className="padding-211">
           {
             achievements.map(data =>
               <li key={data.link}><a href={data.link} target="_blank" rel="noopener noreferrer" className='link'><span className='bold'>{data.title}</span>, {data.from}</a></li>
@@ -57,7 +57,7 @@ const Resources = () => {
           }
         </ul>
         <h4>Organizations</h4>
-        <ul className="padding-21">
+        <ul className="padding-211">
           {
             organizations.map(data =>
               <li key={data.link}><a href={data.link} target="_blank" rel="noopener noreferrer" className='link'><span className='bold'>{data.title}</span></a></li>
@@ -65,7 +65,7 @@ const Resources = () => {
           }
         </ul>
         <h4>Useful Links</h4>
-        <ul className="padding-21">
+        <ul className="padding-211">
           {
             usefulLinks.map(data =>
               <li key={data.link}><a href={data.link} target="_blank" rel="noopener noreferrer" className='link'><span className='bold'>{data.title}</span></a></li>

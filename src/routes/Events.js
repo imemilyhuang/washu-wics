@@ -62,7 +62,7 @@ const Events = () => {
       </div>
       
       <div className="comfy-padding-642">
-        <h1 className="padding-21">Upcoming Events</h1>
+        <h1 className="padding-121">Upcoming Events</h1>
         {
           upcomingEvents.length > 0 ?
           <div className='little-grid'>
@@ -71,7 +71,7 @@ const Events = () => {
           <p className='padding-21-horizontal'>It looks like there are no upcoming events planned, but be on the lookout!</p>
         }
 
-        <h1 className="padding-21">Past Events</h1>
+        <h1 className="padding-121">Past Events</h1>
         {
           pastEvents.length > 0 ?
           <div className='little-grid'>

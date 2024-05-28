@@ -10,6 +10,16 @@ $orange-peach: #FF7F56;
 $white: #FFFFFF;
 $black: #000000;
 
+::-moz-selection {
+  background: $light-purple;
+}
+::-webkit-selection {
+  background: $light-purple;
+}
+::selection {
+  background: $light-purple;
+}
+
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -472,6 +482,21 @@ h1::selection {
 @media only screen and (max-width: 700px) {
   padding-bottom: 2rem;
 }
+}
+
+.padding-211 {
+  padding: 1rem 2rem 2rem 2rem;
+
+  @media only screen and (max-width: 700px) {
+    padding: 1rem;
+  }
+}
+.padding-121 {
+  padding: 2rem 2rem 1rem 2rem;
+
+  @media only screen and (max-width: 700px) {
+    padding: 1rem;
+  }
 }
 
 .padding-21 {

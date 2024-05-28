@@ -60,13 +60,13 @@ const Team = () => {
 
       <div className={`comfy-padding-642 ${width > 1100 ? 'flex-column-center' : 'flex-column'}`} style={{width: "100%"}}>
         <div>
-          <h1 className="padding-21">Current Exec Board</h1>
+          <h1 className="padding-121">Current Exec Board</h1>
           <div className='little-grid'>
             {
               teamMembers.map(data => <TeamMember data={data} key={data.id} />)
             }
           </div>
-          <h2 className="padding-21">Alumni</h2>
+          <h2 className="padding-121">Alumni</h2>
           <div className='little-grid'>
             {
               alumni.map(data => <TeamMember data={data} key={data.id} />)
