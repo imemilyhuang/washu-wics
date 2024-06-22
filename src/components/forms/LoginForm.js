@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { getAuth, signInWithEmailAndPassword } from '@firebase/auth'
 
 import "./Forms.scss"
+import GoBack from '../nav/GoBack'
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({email: "", password: ""})
@@ -58,9 +59,9 @@ const LoginForm = () => {
       />
       {errors.pass.length > 0 && <p className='error'>{errors.pass}</p>}
 
-      <button type='submit' style={{width: "300px"}} className='call-to-action-button margin-bottom-2'><p>Log in</p></button>
+      <button type='submit' style={{width: "300px"}} className='call-to-action-button margin-bottom-2'><h4>Log In</h4></button>
 
-      <button className='link' onClick={() => navigate(-1)}><p className='purple-text'>Go back</p></button>
+      <GoBack />
     </form>
   )
 }

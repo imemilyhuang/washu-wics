@@ -3,6 +3,10 @@ import HoverClipText from "../components/home/HoverClipText"
 import colors from "../colors"
 
 const Contact = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   return (
     <div className="flex-column-center padding-642 dark-gradient-container" style={{height: "100%"}}>
       <div className='heading-container'>

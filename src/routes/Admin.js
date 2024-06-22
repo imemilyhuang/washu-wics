@@ -6,6 +6,10 @@ import ManageTeamMember from "../components/forms/ManageTeamMember"
 import "../components/home/Subsection.scss"
 
 const Admin = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const logout = () => {
     signOut(auth)
   }

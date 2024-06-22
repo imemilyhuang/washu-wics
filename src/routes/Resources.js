@@ -3,6 +3,10 @@ import HoverClipText from "../components/home/HoverClipText"
 import colors from "../colors"
 
 const Resources = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   const achievements = [
     {link: "https://artsandculture.google.com/story/gAWBO5S1I8MMIQ?hl=en", title: "Breaking In: Women in Science, Technology, Engineering, and Mathematics", from: "Google Arts & Culture"},
     {link: "https://www.purdueglobal.edu/blog/information-technology/history-women-information-technology-6-female-computer-science-pioneers/", title: "History of Women in IT: 6 Female Pioneers in Computer Science", from: "Purdue Global"},
@@ -45,7 +49,7 @@ const Resources = () => {
 
       <div className="comfy-padding-642">
         <h4>Achievements in Technology</h4>
-        <ul className="padding-21">
+        <ul className="padding-211">
           {
             achievements.map(data =>
               <li key={data.link}><a href={data.link} target="_blank" rel="noopener noreferrer" className='link'><span className='bold'>{data.title}</span>, {data.from}</a></li>
@@ -53,7 +57,7 @@ const Resources = () => {
           }
         </ul>
         <h4>Organizations</h4>
-        <ul className="padding-21">
+        <ul className="padding-211">
           {
             organizations.map(data =>
               <li key={data.link}><a href={data.link} target="_blank" rel="noopener noreferrer" className='link'><span className='bold'>{data.title}</span></a></li>
@@ -61,7 +65,7 @@ const Resources = () => {
           }
         </ul>
         <h4>Useful Links</h4>
-        <ul className="padding-21">
+        <ul className="padding-211">
           {
             usefulLinks.map(data =>
               <li key={data.link}><a href={data.link} target="_blank" rel="noopener noreferrer" className='link'><span className='bold'>{data.title}</span></a></li>

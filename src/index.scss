@@ -10,6 +10,16 @@ $orange-peach: #FF7F56;
 $white: #FFFFFF;
 $black: #000000;
 
+::-moz-selection {
+  background: $light-purple;
+}
+::-webkit-selection {
+  background: $light-purple;
+}
+::selection {
+  background: $light-purple;
+}
+
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -157,7 +167,7 @@ button h4 {
   max-width: 60rem;
 
   @media only screen and (max-width: 700px) {
-      flex-direction: column;
+    flex-direction: column;
   } 
 }
 
@@ -174,7 +184,7 @@ button h4 {
   align-items: flex-start;
 
   @media only screen and (max-width: 700px) {
-      align-items: center;
+    align-items: center;
   }
 }
   
@@ -256,6 +266,15 @@ button h4 {
 
 h1::selection {
   background: $light-purple;
+}
+
+.max-width-container {
+  width: 100%;
+  max-width: 60rem;
+
+  @media only screen and (max-width: 900px) {
+    max-width: 50rem;
+  }
 }
 
 /* alignment ------------------------------------------------ */
@@ -465,11 +484,33 @@ h1::selection {
 }
 }
 
+.padding-211 {
+  padding: 1rem 2rem 2rem 2rem;
+
+  @media only screen and (max-width: 700px) {
+    padding: 1rem;
+  }
+}
+.padding-121 {
+  padding: 2rem 2rem 1rem 2rem;
+
+  @media only screen and (max-width: 700px) {
+    padding: 1rem;
+  }
+}
+
 .padding-21 {
   padding: 2rem;
 
   @media only screen and (max-width: 700px) {
     padding: 1rem;
+  }
+}
+.padding-21-horizontal {
+  padding: 0 2rem;
+
+  @media only screen and (max-width: 700px) {
+    padding: 0 1rem;
   }
 }
 
