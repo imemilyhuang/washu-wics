@@ -9,6 +9,7 @@
     height: 6rem;
     width: 100%;
     background-color: $dark-purple;
+    flex-shrink: 0;
 }
 
 .expanded-nav-control {
@@ -33,7 +34,6 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    justify-content: space-between;
 }
 
 .foot-container {
