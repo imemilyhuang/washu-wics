@@ -22,7 +22,7 @@ const NavBar = () => {
     }
   }, [navbarOpen, targetElement])
   
-  const data = [{name: "Resources"},{name: "Team"},{name: "Events"},{name: "Contact"}]
+  const data = [{name: "Events"},{name: "Resources"},{name: "Team"},{name: "Contact"}]
   const {user} = useContext(AuthContext);
   const { width } = useWindowDimensions()
 

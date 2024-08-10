@@ -8,6 +8,20 @@
     height: 100vh;
 }
 
+textarea {
+    padding: 1rem 1.4rem;
+    border: 0;
+    background-color: white;
+    width: 960px;
+    height: 160px;
+    resize: none;
+
+    box-shadow: 0 0 15px 1px rgba(0,0,0,.15);
+    border-radius: $buttonBorderRadius;
+    font-size: 1rem;
+    font-family: "Jost", sans-serif;
+}
+
 form input {
     padding: 1rem 1.4rem;
     border: 0;
@@ -24,40 +38,54 @@ form input {
     font-size: 1rem;
     border: 0;
     font-family: "Jost", sans-serif;
+    text-align: center;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .bubble-left {
+    text-align: center;
+    -moz-appearance: textfield;
     background-color: white;
     font-size: 1rem;
     border: 0;
     width: 6rem;
     border-radius: 2rem 0 0 2rem;
-    padding: 2rem 2rem;
+    padding: 1rem;
     box-shadow: 0 0 15px 1px rgba(0,0,0,.15);
     font-family: "Jost", sans-serif;
 }
 .bubble-right {
+    text-align: center;
+    -moz-appearance: textfield;
     background-color: white;
     font-size: 1rem;
     border: 0;
     width: 6rem;
     border-radius: 0 2rem 2rem 0;
-    padding: 2rem 2rem;
+    padding: 1rem;
     box-shadow: 0 0 15px 1px rgba(0,0,0,.15);
     font-family: "Jost", sans-serif;
 }
 input[type="radio"]{
     position: fixed;
     opacity: 0;
+    text-align: center;
 }
 
 .checked {
     background-color: $purple;
     color: $white;
 	transition: background-color 0.2s ease-in-out;
+    text-align: center;
 }
 
 .check-box {
-    padding: 2rem;
+    padding: 1rem;
     border: 2px $purple solid;
 }
 
@@ -71,9 +99,9 @@ label:hover:has(input[type="radio"]:checked) {
 }
 .left-box {
     border-radius: 2rem 0 0 2rem;
-    padding: 2rem 2rem;
+    padding: 1rem;
 }
 .right-box {
     border-radius: 0 2rem 2rem 0;
-    padding: 2rem 2rem;
+    padding: 1rem;
 }

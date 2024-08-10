@@ -14,7 +14,6 @@ const EventPage = () => {
       <div className='max-width-container'>
         <GoBack />
         <h1>{data.title}</h1>
-        <h2>{data.subtitle}</h2>
         <p>Date: {data.startTime.toLocaleDateString('en-US')}</p>
         <p>Time: {
           data.startTime.toLocaleTimeString('en-US', {hour: "numeric", minute: "numeric"})} - {

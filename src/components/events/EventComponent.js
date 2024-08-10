@@ -1,4 +1,4 @@
-import { getDownloadURL, ref } from '@firebase/storage'
+import { deleteObject, getDownloadURL, ref } from '@firebase/storage'
 import React, { useContext, useEffect, useState } from 'react'
 import { db, storage } from '../../firebase'
 import "./EventComponent.scss"
@@ -32,14 +32,15 @@ const EventComponent = ({data}) => {
   const del = async () => {
     await deleteDoc(doc(db, "events", data.id));
     if (data.imagePath==="default") {
-      // eventually delete image in the database, add this later
+      const pathRef = ref(storage, `events/${data.imagePath}`)
+      deleteObject(pathRef)
     }
   }
 
   const { width } = useWindowDimensions()
 
   return <div onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} 
-    onClick={() => navigate("/events/"+data.imagePath.split('.')[0], { state: {data: data}})} 
+    onClick={() => !user && navigate("/events/"+data.id, { state: {data: data}})} 
     className='pad2 t-card padding-21'>
     <img className={`pic ${width > 700 && 'margin-bottom-1'}`} src={image} alt={data.name} />
     <div className={`${width <= 700 && 'margin-left-1'}`}>
@@ -49,19 +50,21 @@ const EventComponent = ({data}) => {
         data.startTime.toLocaleTimeString('en-US', {hour: "numeric", minute: "numeric"})} - {
         data.endTime.toLocaleTimeString('en-US', {hour: "numeric", minute: "numeric"})}</p>
       <p className={`purple-text ${width > 700 && 'center-text'}`}>{data.location}</p>
-      { isHover && user &&
-        <div className="container-row" style={{marginTop: "1rem"}}>
-          <button className='purple-gradient-button bold white-text'>Edit</button>
-          <button
-            className='purple-gradient-button bold white-text'
-            onClick={del}
-            style={{marginLeft: "1rem"}}
-          >
-            Delete
-          </button>
-        </div>
-      }
     </div>
+    { isHover && user &&
+      <div style={{position: 'absolute', display: 'flex', flexDirection: 'column', gap: '1rem', borderRadius: 25,
+        top: 0, justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%', backgroundColor: '#00000090'}}>
+        <button onClick={() => navigate("/events/"+data.id, { state: {data: data}})}
+          className='blue-gradient-button bold white-text'>View</button>
+        <button className='purple-gradient-button bold white-text'>Edit</button>
+        <button
+          className='red-gradient-button bold white-text'
+          onClick={del}
+        >
+          Delete
+        </button>
+      </div>
+    }
   </div>
 }
 

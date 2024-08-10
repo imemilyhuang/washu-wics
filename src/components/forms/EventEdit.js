@@ -7,7 +7,7 @@ import { Timestamp, addDoc, collection } from '@firebase/firestore';
 
 const EventEdit = () => {
   const [formData, setFormData] = useState({
-    title: "", subtitle: "", host: "WiCS", description: "", location: "", imagePath: "",
+    title: "", description: "", location: "", imagePath: "",
     startTime: new Date(), endTime: new Date(), date: new Date().toISOString().split('T')[0]
   })
 
@@ -38,78 +38,68 @@ const EventEdit = () => {
 
     const imageRef = ref(storage, `events/${formData.imagePath}`)
     uploadBytes(imageRef, file).then(async snapshot => {
-      const newDocRef = await addDoc(collection(db, "events"), {
+      addDoc(collection(db, "events"), {
         title: formData.title,
-        subtitle: formData.subtitle,
         description: formData.description,
+        location: formData.location,
+        imagePath: formData.imagePath,
+        date: formData.date,
         endTime: Timestamp.fromDate(formData.endTime),
         startTime: Timestamp.fromDate(formData.startTime),
-        host: formData.host,
-        imagePath: formData.imagePath,
-        location: formData.location,
-      });
-
-      console.log(newDocRef)
+      }).then(() => {
+        setFormData({
+          title: "", description: "", location: "", imagePath: "",
+          startTime: new Date(), endTime: new Date(), date: new Date().toISOString().split('T')[0]
+        })
+        alert("new event created bruh")
+      })
     }).catch(err => console.log(err))
   }
 
   return (
-    <form name="eventForm">
-      <h4>Create a New Event</h4>
-      <input
-        type='text' name='title'
-        placeholder='Title'
-        value={formData.title}
-        onChange={handleChange}
-        className="input"
-      />
-      <input
-        type='text' name='subtitle'
-        placeholder='Subtitle'
-        value={formData.subtitle}
-        onChange={handleChange}
-        className="input"
-      />
-      <input
-        type='text' name='description'
-        placeholder='Description'
-        value={formData.description}
-        onChange={handleChange}
-        className="input"
-      />
-      <input
-        type='text' name='location'
-        placeholder='Location'
-        value={formData.location}
-        onChange={handleChange}
-        className="input"
-      />
-      <input
-        type='text' name='host'
-        placeholder='Host'
-        value={formData.host}
-        onChange={handleChange}
-        className="input"
-      />
-      <input
-        type='file' name='image' onChange={handleFileUpload}
-        className="input"
-      />
-      <input
-        type='date' name='date'
-        placeholder='Date'
-        value={formData.date}
-        onChange={handleChange}
-        className="input margin-bottom-42"
-      />
+    <form name="eventForm" className='max-width-container' style={{gap: '2rem', display: 'flex', flexDirection: 'column'}}>
+      <h4 className='margin-bottom-1'>Create a New Event</h4>
+      <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '2rem'}}>
+        <input
+          type='text' name='title'
+          placeholder='Title'
+          value={formData.title}
+          onChange={handleChange}
+        />
+        <input
+          type='text' name='location'
+          placeholder='Location'
+          value={formData.location}
+          onChange={handleChange}
+        />
+        <input
+          type='file' name='image' onChange={handleFileUpload}
+        />
+        <input
+          type='date' name='date'
+          placeholder='Date'
+          value={formData.date}
+          onChange={handleChange}
+        />
 
-      <p className="margin-bottom-1">Start Time</p>
-      <div className="margin-bottom-21">
-        <TimePicker formData={formData} setFormData={setFormData} name={"startTime"} />
+        <textarea
+          type='text' name='description'
+          placeholder='Description'
+          value={formData.description}
+          onChange={handleChange}
+        />
+
       </div>
-      <p className="margin-bottom-1">End Time</p>
-      <div className="margin-bottom-21">
-        <TimePicker formData={formData} setFormData={setFormData} name={"endTime"} />
+
+      <div style={{display: 'flex', flexDirection: 'row', gap: '5rem'}}>
+        <div style={{display: 'flex', flexDirection: 'column', gap: '0.5rem'}}>
+          <p>Start Time</p>
+          <TimePicker formData={formData} setFormData={setFormData} name={"startTime"} />
+        </div>
+        <div style={{display: 'flex', flexDirection: 'column', gap: '0.5rem'}}>
+          <p>End Time</p>
+          <TimePicker formData={formData} setFormData={setFormData} name={"endTime"} />
+        </div>
       </div>
       <button type='button' onClick={handleSubmit} className='purple-gradient-button' style={{width: "12rem"}}><h4>Create</h4></button>
     </form>

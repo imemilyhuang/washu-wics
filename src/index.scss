@@ -3,10 +3,16 @@ $buttonBorderRadius: 25px;
 $dark-purple: #3c3861;
 $purple: #626EEB;
 $light-purple: #9E8CFF;
+
+$blue: #0195ba;
+$light-blue: #1fc7ff;
+
 $pink: #FF71BC;
 $light-pink: #ff96ce;
+
 $peach: #f5dcdc;
 $orange-peach: #FF7F56;
+$red: #d6204e;
 $white: #FFFFFF;
 $black: #000000;
 
@@ -141,8 +147,30 @@ button h4 {
   color: $white;
 }
 
-.input {
-  margin: 1rem;
+.blue-gradient-button {
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  cursor: pointer;
+  background: linear-gradient(to left, $blue 0%, $light-blue 50%, $blue 100%);
+  background-size: 200%;
+  transition: 0.6s;
+}
+
+.blue-gradient-button:hover {
+  background-position: right;
+}
+
+.red-gradient-button {
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  cursor: pointer;
+  background: linear-gradient(to left, $red 0%, $pink 50%, $red 100%);
+  background-size: 200%;
+  transition: 0.6s;
+}
+
+.red-gradient-button:hover {
+  background-position: right;
 }
 
 .purple-gradient-button {
@@ -195,12 +223,12 @@ button h4 {
   align-items: flex-start;
 
   @media only screen and (max-width: 700px) {
-      flex-direction: row;
-      align-items: center;
+    flex-direction: row;
+    align-items: center;
   }
 
   @media only screen and (max-width: 450px) {
-      flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -208,7 +236,7 @@ button h4 {
   text-align: left;
 
   @media only screen and (max-width: 700px) {
-      text-align: center;
+    text-align: center;
   }
 }
 
