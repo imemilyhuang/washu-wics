@@ -56,7 +56,7 @@ const EventComponent = ({data}) => {
         top: 0, justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%', backgroundColor: '#00000090'}}>
         <button onClick={() => navigate("/events/"+data.id, { state: {data: data}})}
           className='blue-gradient-button bold white-text'>View</button>
-        <button className='purple-gradient-button bold white-text'>Edit</button>
+        <button onClick={() => navigate("/admin", { state: {data: data}})} className='purple-gradient-button bold white-text'>Edit</button>
         <button
           className='red-gradient-button bold white-text'
           onClick={del}

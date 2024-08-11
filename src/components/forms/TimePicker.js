@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./Forms.scss"
 
 const TimePicker = ({setFormData, formData, name}) => {
-    console.log(formData[name].toLocaleTimeString())
+    // console.log(formData[name].toLocaleTimeString())
 
     const [hour, setHour] = useState(formData[name].toLocaleTimeString().split(":")[0]);
     const [minute, setMinute] = useState(formData[name].getMinutes());
