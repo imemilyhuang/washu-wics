@@ -30,10 +30,12 @@ const EventComponent = ({data}) => {
   const navigate = useNavigate()
   
   const del = async () => {
-    await deleteDoc(doc(db, "events", data.id));
-    if (data.imagePath==="default") {
-      const pathRef = ref(storage, `events/${data.imagePath}`)
-      deleteObject(pathRef)
+    if (window.confirm("bro are you sure you want to delete???")) {
+      await deleteDoc(doc(db, "events", data.id));
+      if (data.imagePath==="default") {
+        const pathRef = ref(storage, `events/${data.imagePath}`)
+        deleteObject(pathRef)
+      }
     }
   }
 

@@ -125,7 +125,7 @@ const ManageEvents = ({data}) => {
           <TimePicker formData={formData} setFormData={setFormData} name={"endTime"} />
         </div>
       </div>
-      <button type='button' onClick={handleSubmit} className='purple-gradient-button' style={{width: "12rem"}}><h4>{data ? "Edit" : "Create"}</h4></button>
+      <button type='button' onClick={handleSubmit} className='purple-gradient-button' style={{width: "12rem"}}><h4>{data ? "Save" : "Create"}</h4></button>
     </form>
   )
 }
