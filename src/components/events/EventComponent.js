@@ -9,7 +9,7 @@ import { doc, deleteDoc } from 'firebase/firestore'
 import useWindowDimensions from '../../useWindowDimensions'
 
 const EventComponent = ({data}) => {
-  const [image, setImage] = useState(process.env.PUBLIC_URL+"/assets/default-pfp.png")
+  const [image, setImage] = useState(process.env.PUBLIC_URL+"/assets/events-placeholder.png")
   
   const {user} = useContext(AuthContext);
   const [isHover, setIsHover] = useState(false)
