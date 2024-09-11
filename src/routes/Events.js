@@ -31,7 +31,7 @@ const Events = () => {
       })
 
       setPastEvents(past)
-      setUpcomingEvents(upcoming)
+      setUpcomingEvents(upcoming.reverse())
     })
     
     return () => {
