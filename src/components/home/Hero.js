@@ -5,7 +5,12 @@ import { Link } from 'react-router-dom';
 import colors from '../../colors';
 
 const Hero = () => {
-  const data = [{imagePath:"lacrm-white.png", link: "https://www.lessannoyingcrm.com/"}, {imagePath:"spectrum-white.png", link: "https://www.spectrum.com/"}]
+  const data = [
+    {imagePath:"lacrm-white.png", link: "https://www.lessannoyingcrm.com/"},
+    {imagePath:"spectrum-white.png", link: "https://www.spectrum.com/"},
+    {imagePath:"capitalone-white.png", link: "https://www.capitalone.com/"},
+    {imagePath:"anheuser-busch-white.png", link: "https://www.anheuser-busch.com/"},
+  ]
 
   return (
     <div className="flex-column-center padding-642 dark-gradient-container">
@@ -39,7 +44,7 @@ const Hero = () => {
             <img
               alt='sponsor'
               src={process.env.PUBLIC_URL+"/assets/sponsors/"+image.imagePath}
-              className="hero-sponsor-img"
+              className="hero-sponsor-img tint-white"
             />
           </a>
           )

@@ -48,6 +48,10 @@
     }
 }
 
+.tint-image {
+    filter: brightness(0) invert(1);
+}
+
 .text-container {
     position: relative; /* Enable stacking for overlay */
     overflow: hidden; /* Clip overflowing content */
