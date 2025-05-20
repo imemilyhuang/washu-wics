@@ -1,4 +1,4 @@
-import { collection, onSnapshot, query } from '@firebase/firestore'
+import { collection, limit, onSnapshot, orderBy, query } from '@firebase/firestore'
 import React, { useEffect, useState } from 'react'
 import { db } from '../../firebase'
 
@@ -8,10 +8,16 @@ const StayConnected = () => {
   const [feed, setFeed] = useState([])
 
   useEffect(() => {
-    const q = query(collection(db, "instagram"))
+    const q = query(collection(db, "events"), orderBy("startTime", "desc"), limit(6))
     const unsubscribe = onSnapshot(q, res => {
-      setFeed(res.docs[0].data().data)
+      let events = []
+      res.docs.forEach(doc => {
+        events.push({...doc.data(), id: doc.id})
+      })
+
+      setFeed(events)
     })
+    
     return () => {
       unsubscribe()
     }
