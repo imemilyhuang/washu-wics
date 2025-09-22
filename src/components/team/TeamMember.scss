@@ -37,13 +37,14 @@
     align-items: center;
     background-color: $white;
     transition: 0.3s ease-out;
-    cursor: pointer;
 }
 
 .insta-card:hover {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     transform: scale(1.02);
-    filter: brightness(75%)
+    filter: brightness(75%);
+    cursor: pointer;
+    pointer-events: auto;
 }
 
 .t-card {
