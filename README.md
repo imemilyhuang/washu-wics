@@ -1,5 +1,10 @@
-# Repository for new WashU WiCS website
+# Repository for WashU WiCS website
 
-Official link: [https://www.wics.wustl.edu/](https://www.wics.wustl.edu/)
+**Official link:** [https://www.wics.wustl.edu/](https://www.wics.wustl.edu/)
 
-*To deploy:* `npm run deploy`
+---
+
+Help for maintaining the website:
+- *To update the website:* `npm run deploy`
+- Keep the github repo updated by pushing to this branch
+- Update the firebase with the correct data (for instagram feed, events page, and exec board)
