@@ -1,34 +1,8 @@
-import { doc, getDoc } from '@firebase/firestore'
-import React, { useEffect, useState } from 'react'
-import { db } from '../../firebase'
-
+import React from 'react'
 import InstaPost from './InstaPost'
+import { feedData } from "../../data/feedData"
 
 const StayConnected = () => {
-  const [feed, setFeed] = useState([])
-
-  useEffect(() => {
-    const unsubscribe = async () => {
-      const docRef = doc(db, "instagram", "feed")
-      const docSnap = await getDoc(docRef);
-      
-      if (docSnap.exists()) {
-        let posts = []
-        docSnap.data().data.forEach(doc => {
-          posts.push({...doc, id: doc.link})
-        })
-  
-        setFeed(posts)
-      } else {
-        console.log("No such document!");
-      }
-    }
-    
-    return () => {
-      unsubscribe()
-    }
-  }, [])
-
   return (
     <div className="flex-column-center comfy-padding-642 pink-container">
       <div className="flex-column-center">
@@ -42,7 +16,7 @@ const StayConnected = () => {
 
         <div className="margin-bottom-2 insta-grid">
         {
-          feed.map(data => <InstaPost data={data} key={data.link} />)
+          feedData.map(data => <InstaPost data={data} key={data.link} />)
         }
         </div>
 

@@ -1,48 +1,17 @@
-import { deleteObject, getDownloadURL, ref } from '@firebase/storage'
-import React, { useContext, useEffect, useState } from 'react'
-import { db, storage } from '../../firebase'
-import "./EventComponent.scss"
-import "../team/TeamMember.scss"
+import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { AuthContext } from '../../context/AuthContext'
-import { doc, deleteDoc } from 'firebase/firestore'
 import useWindowDimensions from '../../useWindowDimensions'
 
+import "./EventComponent.scss"
+import "../team/TeamMember.scss"
+
 const EventComponent = ({data}) => {
-  const [image, setImage] = useState(process.env.PUBLIC_URL+"/assets/events-placeholder.png")
-  
-  const {user} = useContext(AuthContext);
-  const [isHover, setIsHover] = useState(false)
-
-  useEffect(() => {
-    if (data.imagePath!=="default") {
-      const pathRef = ref(storage, `events/${data.imagePath}`)
-      getDownloadURL(pathRef)
-        .then((url) => {
-          setImage(url)
-        })
-        .catch((error) => {
-          console.log(error)
-        });
-    }
-  }, [data.imagePath])
-
+  const image = process.env.PUBLIC_URL+"/assets/images/events/"+data.imagePath
   const navigate = useNavigate()
-  
-  const del = async () => {
-    if (window.confirm("bro are you sure you want to delete???")) {
-      await deleteDoc(doc(db, "events", data.id));
-      if (data.imagePath==="default") {
-        const pathRef = ref(storage, `events/${data.imagePath}`)
-        deleteObject(pathRef)
-      }
-    }
-  }
-
   const { width } = useWindowDimensions()
 
-  return <div onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} 
-    onClick={() => !user && navigate("/events/"+data.id, { state: {data: data}})} 
+  return <div
+    onClick={() => navigate("/events/"+data.id, { state: {data: data}})} 
     className='pad2 t-card padding-21'>
     <img className={`pic ${width > 700 && 'margin-bottom-1'}`} src={image} alt={data.name} />
     <div className={`${width <= 700 && 'margin-left-1'}`}>
@@ -53,20 +22,6 @@ const EventComponent = ({data}) => {
         data.endTime.toLocaleTimeString('en-US', {hour: "numeric", minute: "numeric"})}</p>
       <p className={`purple-text ${width > 700 && 'center-text'}`}>{data.location}</p>
     </div>
-    { isHover && user &&
-      <div style={{position: 'absolute', display: 'flex', flexDirection: 'column', gap: '1rem', borderRadius: 25,
-        top: 0, justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%', backgroundColor: '#00000090'}}>
-        <button onClick={() => navigate("/events/"+data.id, { state: {data: data}})}
-          className='blue-gradient-button bold white-text'>View</button>
-        <button onClick={() => navigate("/admin", { state: {data: data}})} className='purple-gradient-button bold white-text'>Edit</button>
-        <button
-          className='red-gradient-button bold white-text'
-          onClick={del}
-        >
-          Delete
-        </button>
-      </div>
-    }
   </div>
 }
 

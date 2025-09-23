@@ -1,9 +1,8 @@
-import { collection, onSnapshot, orderBy, query } from '@firebase/firestore'
 import React, { useEffect, useState } from 'react'
 import HoverClipText from "../components/home/HoverClipText"
 import colors from "../colors"
-import { db } from '../firebase'
 import EventComponent from '../components/events/EventComponent'
+import { eventsData } from '../data/eventsData'
 
 const Events = () => {
   React.useEffect(() => {
@@ -14,29 +13,22 @@ const Events = () => {
   const [upcomingEvents, setUpcomingEvents] = useState([])
 
   useEffect(() => {
-    const q = query(collection(db, "events"), orderBy("startTime", "desc"))
-    const unsubscribe = onSnapshot(q, res => {
-      let upcoming = []
-      let past = []
-      res.docs.forEach(doc => {
-        const newDoc = {...doc.data(), id: doc.id,
-          startTime: new Date(1000*doc.data().startTime.seconds),
-          endTime: new Date(1000*doc.data().endTime.seconds),
-        }
-        if (newDoc.startTime >= new Date()) {
-          upcoming.push(newDoc)
-        } else {
-          past.push(newDoc)
-        }
-      })
-
-      setPastEvents(past)
-      setUpcomingEvents(upcoming.reverse())
-    })
+    let upcoming = []
+    let past = []
     
-    return () => {
-      unsubscribe()
-    }
+    eventsData.forEach(doc => {
+      const newDoc = {...doc, startTime: new Date(doc.startTime),
+        endTime: new Date(doc.endTime),
+      }
+      if (newDoc.startTime >= new Date()) {
+        upcoming.push(newDoc)
+      } else {
+        past.push(newDoc)
+      }
+    })
+
+    setPastEvents(past)
+    setUpcomingEvents(upcoming.reverse())
   }, [])
 
   return (

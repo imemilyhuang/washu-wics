@@ -1,10 +1,9 @@
-import { collection, onSnapshot, orderBy, query } from '@firebase/firestore'
 import React, { useEffect, useState } from 'react'
 import HoverClipText from "../components/home/HoverClipText"
 import colors from "../colors"
-import { db } from '../firebase'
 import TeamMember from '../components/team/TeamMember'
 import useWindowDimensions from '../useWindowDimensions'
+import { peopleData } from "../data/peopleData"
 
 const Team = () => {
   React.useEffect(() => {
@@ -15,25 +14,19 @@ const Team = () => {
   const [alumni, setAlumni] = useState([])
 
   useEffect(() => {
-    const q = query(collection(db, "team"), orderBy("order", "asc"))
-    const unsubscribe = onSnapshot(q, res => {
-      let newDocs = []
-      let newAlumni = []
-      res.docs.forEach(doc => {
-        if (doc.data()?.alumni) {
-          newAlumni.push({...doc.data(), id: doc.id})
-        } else {
-          newDocs.push({...doc.data(), id: doc.id})
-        }
-      })
-
-      setAlumni(newAlumni)
-      setTeamMembers(newDocs)
-    })
+    let newDocs = []
+    let newAlumni = []
     
-    return () => {
-      unsubscribe()
-    }
+    peopleData.forEach(doc => {
+      if (doc.alumni) {
+        newAlumni.push(doc)
+      } else {
+        newDocs.push(doc)
+      }
+    })
+
+    setAlumni(newAlumni)
+    setTeamMembers(newDocs)
   }, [])
 
   const { width } = useWindowDimensions()
