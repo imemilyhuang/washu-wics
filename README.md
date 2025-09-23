@@ -5,6 +5,8 @@
 ---
 
 Help for maintaining the website:
-- *To update the website:* `npm run deploy`
+- *To upload changes of the website:* `npm run deploy`
 - Keep the github repo updated by pushing to this branch
-- Update the firebase with the correct data (for instagram feed, events page, and exec board)
+- Update the `public/assets/images` with the correct images
+    -  for instagram feed, events page, and exec board
+- Then update the corresponding data file located in `src/data/`
