@@ -7,10 +7,6 @@ import "../components/home/Subsection.scss"
 import { useLocation } from 'react-router-dom'
 
 const Admin = () => {
-  React.useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
-
   const logout = () => {
     signOut(auth)
   }

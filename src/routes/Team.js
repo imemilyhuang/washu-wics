@@ -6,17 +6,13 @@ import useWindowDimensions from '../useWindowDimensions'
 import { peopleData } from "../data/peopleData"
 
 const Team = () => {
-  React.useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
-  
   const [teamMembers, setTeamMembers] = useState([])
   const [alumni, setAlumni] = useState([])
 
   useEffect(() => {
     let newDocs = []
     let newAlumni = []
-    
+
     peopleData.forEach(doc => {
       if (doc.alumni) {
         newAlumni.push(doc)

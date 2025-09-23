@@ -5,10 +5,6 @@ import EventComponent from '../components/events/EventComponent'
 import { eventsData } from '../data/eventsData'
 
 const Events = () => {
-  React.useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
-  
   const [pastEvents, setPastEvents] = useState([])
   const [upcomingEvents, setUpcomingEvents] = useState([])
 

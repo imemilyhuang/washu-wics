@@ -5,11 +5,8 @@ import colors from "../colors"
 import "../components/home/Hero.scss"
 
 const Lost = () => {
-  React.useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
-  
   const navigate = useNavigate()
+  
   return (
     <div className='flex-column-center'>
       <div className="flex-column-center padding-642 dark-gradient-container">

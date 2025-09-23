@@ -3,10 +3,6 @@ import HoverClipText from "../components/home/HoverClipText"
 import colors from "../colors"
 
 const Resources = () => {
-  React.useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
-  
   const achievements = [
     {link: "https://artsandculture.google.com/story/gAWBO5S1I8MMIQ?hl=en", title: "Breaking In: Women in Science, Technology, Engineering, and Mathematics", from: "Google Arts & Culture"},
     {link: "https://www.purdueglobal.edu/blog/information-technology/history-women-information-technology-6-female-computer-science-pioneers/", title: "History of Women in IT: 6 Female Pioneers in Computer Science", from: "Purdue Global"},

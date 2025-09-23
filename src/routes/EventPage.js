@@ -3,9 +3,6 @@ import { useLocation } from 'react-router-dom'
 import GoBack from '../components/nav/GoBack'
 
 const EventPage = () => {
-  React.useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
   const loc = useLocation()
   const data = loc.state.data
 
